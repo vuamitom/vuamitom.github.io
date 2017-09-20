@@ -16,12 +16,13 @@
 title: Tam's blog 
 email: vumhtam@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    My primary mental model is software engineering. Systems with well orchestrated independent components fascinated me. I built a few fairly complex rich client applications. Doing better each day. 
+    Float. Binary. Sinusoidal.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vuamitom 
 github_username: vuamitom
-
+google_analytics: UA-38524894-3
+comments: false 
 # Build settings
 markdown: kramdown
 theme: minima
