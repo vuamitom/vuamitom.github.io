@@ -2,6 +2,7 @@
 layout: post
 title: C++ '&' operator
 date: '2016-03-23 14:10:19'
+category: engineering
 tags:
 - technical
 ---

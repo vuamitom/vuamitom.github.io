@@ -2,6 +2,7 @@
 layout: post
 title: Create a Ghost blog for free
 date: '2015-11-29 05:51:53'
+category: trivial
 tags:
 - life
 ---

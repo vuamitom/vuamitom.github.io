@@ -2,6 +2,7 @@
 layout: post
 title: The Remains of The Day
 date: '2016-03-21 16:20:12'
+category: book
 tags:
 - books
 ---

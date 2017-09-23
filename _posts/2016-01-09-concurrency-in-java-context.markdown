@@ -2,6 +2,7 @@
 layout: post
 title: Concurrency in Java context
 date: '2016-01-09 17:25:40'
+category: engineering
 tags:
 - technical
 - java

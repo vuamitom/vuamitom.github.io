@@ -2,6 +2,7 @@
 layout: post
 title: Java byte literal for value greater than 0x80
 date: '2016-06-18 15:09:01'
+category: book
 tags:
 - technical
 ---

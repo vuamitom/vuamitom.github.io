@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Japan Garden
+category: trivial
 tags:
 - life
 - japan
