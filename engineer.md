@@ -1,6 +1,6 @@
 ---
 layout: category
-category: engineering
+tag: technical
 title: Engineering
 permalink: /engineering/
 ---

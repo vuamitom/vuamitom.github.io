@@ -10,7 +10,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-    	{% if post.category == page.category %}
+    	{% if post.tags contains page.tag %}
 	      <li>
 	        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 	        <span class="post-meta">{{ post.date | date: date_format }}</span>

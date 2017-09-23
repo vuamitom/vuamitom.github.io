@@ -2,7 +2,6 @@
 layout: post
 title: A friend's advice.
 date: '2016-09-13 18:57:40'
-category: trivial
 tags:
 - life
 ---

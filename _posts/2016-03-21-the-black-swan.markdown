@@ -2,7 +2,6 @@
 layout: post
 title: The Black Swan
 date: '2016-03-21 17:12:08'
-category: book
 tags:
 - books
 ---

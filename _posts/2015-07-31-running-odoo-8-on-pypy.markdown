@@ -2,7 +2,6 @@
 layout: post
 title: Running Odoo 8 on Pypy
 date: '2015-07-31 05:19:00'
-category: engineering
 tags:
 - odoo
 - pypy

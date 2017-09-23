@@ -1,6 +1,6 @@
 ---
 layout: category
-category: trivial
+tag: life
 title: Trivial
 permalink: /trivial/
 ---

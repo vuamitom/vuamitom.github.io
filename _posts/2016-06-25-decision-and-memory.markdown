@@ -2,7 +2,6 @@
 layout: post
 title: Decisions and Memory
 date: '2016-06-25 14:36:18'
-category: trivial
 tags:
 - life
 ---

@@ -2,7 +2,6 @@
 layout: post
 title: Boredom
 date: '2016-06-18 13:07:21'
-category: trivial
 tags:
 - life
 ---

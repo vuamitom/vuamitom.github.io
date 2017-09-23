@@ -2,7 +2,6 @@
 layout: post
 title: Tornado Non-blocking Smtp Client
 date: '2014-07-28 05:16:00'
-category: engineering
 tags:
 - tornado
 - python
