@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">{{ page.title | escape }}</h1>
+  <h1 class="page-heading">{{ page.title | escape }} {{ site.disqus.shortname | escape}}</h1>
 
   {{ content }}
 
