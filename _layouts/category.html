@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">{{ page.title | escape }} {{ site.disqus.shortname | escape}}</h1>
+  <h1 class="page-heading">{{ page.title | escape }} </h1>
 
   {{ content }}
 
@@ -12,15 +12,34 @@ layout: default
     {% for post in site.posts %}
     	{% if post.tags contains page.tag %}
 	      <li>
-	        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-	        <span class="post-meta">{{ post.date | date: date_format }}</span>
+	        
 
 	        <h2>
 	          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-	        </h2>
+					</h2>
+					{%- if site.show_excerpts -%}
+						{{ post.excerpt }}
+					{%- endif -%}
+					{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+	        <span class="post-meta">{{ post.date | date: date_format }}</span>
 	      </li>
       	{% endif %}
     {% endfor %}
+	</ul>
+	
+	{% if paginator.total_pages > 1 %}
+  <ul class="pager">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
   </ul>
+  {% endif %}
 
 </div>
