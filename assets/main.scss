@@ -1,0 +1,14 @@
+@import "minima";
+
+$t-link-color: #212121;
+.post-link {
+    color: $t-link-color;
+    text-decoration: none;
+    &:hover {
+        color: blue;
+        text-decoration: none;
+    }
+}
+.testing {
+    color: red;
+}
