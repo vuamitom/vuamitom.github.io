@@ -1,7 +1,10 @@
 
 
-1. install gem 
-
+1. install gem
+```
+# On ubuntu 18
+sudo apt-get install ruby-dev
+``` 
 2. install jekyll
 ```
 gem install jekyll bundler
