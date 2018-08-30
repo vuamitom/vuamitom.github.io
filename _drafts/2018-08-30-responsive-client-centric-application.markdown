@@ -22,3 +22,5 @@ tags:
 
 7. it pays to have some form of arbiter at interfaces such as databases, network, callback executioner... such that you have control of priority and better awareness of what's going on. 
 
+8. Some form of placeholder to reduce re-layout helps. E.g server can communicate total no of images first. Client display accordingly before actually getting the picture.
+
