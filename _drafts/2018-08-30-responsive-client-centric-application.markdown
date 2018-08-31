@@ -7,6 +7,13 @@ tags:
 - technical
 ---
 
+Working on frontend's performance means focus of perceived performance vs actual performance. 
+
+Some example includes
+- pre-load above the fold. 
+- load part of the data first. 
+- breaking down processing into smaller chunk (like react fibre)
+
 
 1. have your own event queue to better arbitrage different action
 
@@ -23,4 +30,6 @@ tags:
 7. it pays to have some form of arbiter at interfaces such as databases, network, callback executioner... such that you have control of priority and better awareness of what's going on. 
 
 8. Some form of placeholder to reduce re-layout helps. E.g server can communicate total no of images first. Client display accordingly before actually getting the picture.
+
+9. Loading spinner should not be there if wait time is too short. 
 
