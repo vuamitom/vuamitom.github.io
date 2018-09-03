@@ -15,6 +15,8 @@ Some example includes
 - breaking down processing into smaller chunk (like react fibre)
 
 
+With all that has been said. I'm tryng to put down a comprehensive list of things that could have saved me the troubles. These are stuffs I learned along the way and was fortunate enough to lead those important projects. Had I known it from the beginning, I could have designed a better application. 
+
 1. have your own event queue to better arbitrage different action
 
 2. throttle request that happens too often while only the last one matters
@@ -33,3 +35,8 @@ Some example includes
 
 9. Loading spinner should not be there if wait time is too short. 
 
+10. Retry with network failures. But only with errors due to network. Not with server error codes. Do not retry on server error code. As it may overload the server further. 
+
+11. Show offline data first before fetching online one. 
+
+12. Merging offline and online state: a locally unique id is often helpful in deduping and joining result after ward.
