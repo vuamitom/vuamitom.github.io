@@ -7,12 +7,23 @@ tags:
 - technical
 ---
 
+
+What I talk about when I talk about responsive application
+
+It is becoming increasingly simple to put together a working application in a short amount of time. Firstly, a large number of frontend frameworks and tools offer to solve the gound work of setting up basic base. It takes a few minutes to pull Bootstrap and draw an app's layout with predefined css classes. An equally short amount of time to add React, which loosely enforce a interface update cycle that help avoiding performance penalty of abusing DOM updates. And any framework, minimal or opinionated, help development faster by eliminate the multipilicity of choices. Secondly, faster computers make programmers' time more valuable compared to computers' time. 
+
+However, when building applications that serves millions of users a day and loaded up with data, it pays to get details right to provide the most robust and responsive experience. Below are bullet points that I think might help alot had they been considered upfront. I have always approached application building by building what is absolute minimum necessary for an function to work and scale up from there. But in restropect, sometimes I underestimate the benefit of those principles(??), which as a result cost me hours of rusing to fix before launch date. 
+
+These bullet points are in no particular order.    
+
+
 Working on frontend's performance means focus of perceived performance vs actual performance. 
 
 Some example includes
 - pre-load above the fold. 
 - load part of the data first. 
 - breaking down processing into smaller chunk (like react fibre)
+- JVM garbage collection strategy (mark sweep gc vs ...)
 
 
 With all that has been said. I'm tryng to put down a comprehensive list of things that could have saved me the troubles. These are stuffs I learned along the way and was fortunate enough to lead those important projects. Had I known it from the beginning, I could have designed a better application. 
@@ -40,3 +51,5 @@ With all that has been said. I'm tryng to put down a comprehensive list of thing
 11. Show offline data first before fetching online one. 
 
 12. Merging offline and online state: a locally unique id is often helpful in deduping and joining result after ward.
+
+13. Making a cut between config batch saving and auto saving per config line can be really different. (this is more of UX, it's about communicate error on time and at the right place)
