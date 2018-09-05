@@ -53,3 +53,5 @@ With all that has been said. I'm tryng to put down a comprehensive list of thing
 12. Merging offline and online state: a locally unique id is often helpful in deduping and joining result after ward.
 
 13. Making a cut between config batch saving and auto saving per config line can be really different. (this is more of UX, it's about communicate error on time and at the right place)
+
+14. Retry with photos and all. Coming from web background, a lot of people take it for granted that users would just hit the refresh button. Web is stateless. A long live application is stateful
