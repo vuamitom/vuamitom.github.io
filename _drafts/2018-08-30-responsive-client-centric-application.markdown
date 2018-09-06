@@ -19,6 +19,10 @@ These bullet points are in no particular order.
 
 Working on frontend's performance means focus of perceived performance vs actual performance. 
 
+When you scale an application to the platform's limit. It's important to take control of everything. From downloading an image to how to render them. There are so many legacies in the web platform that it will have a hard time catching up with native dev platform. One of them is how image is downloaded and handle. Even though image bitmap has already been downloaded and rendered to <img/> object, it not possible for javascript to read from there and manipulate bitmap freely without first drawing to a canvas. <img /> does not display according to BOM header. we used a separate thread to read byte
+
+There are multiple uses of indexeddb. However, we push indexeddb to its limit by inserting thousands of messages to it. Other data as well. When number of users is large, there are edge cases. Case when users happen to have a almost full hard-disk. Chrome indexeddb does not support a persistence database. Which means that it delete all the data without users consent. Not only that. Sometimes data is lost when host machine crashes. (known issue with Chrome indexeddb), and users end up with a corrupted db. Then Chrome would automatically delete it to open a new one just as well. 
+
 Some example includes
 - pre-load above the fold. 
 - load part of the data first. 
