@@ -1,11 +1,29 @@
 ---
 layout: post
-title: On making a smooth client centric javascript application
+title: Simple techniques to make a client app appears faster and reliable
 date: '2018-08-30 17:43:00'
 tags:
 - rich client
 - technical
 ---
+
+During the course of building a fast and reliable client application that serves millions of users daily, me and my team at work use some simple tweaks to bring about a better perceived speed and performance.
+
+Here they are, in no particular order. 
+
+1. Inline css background and spinner
+
+2. Use throttling 
+
+3. delay spinner
+
+4. Cached image as blob
+
+All in all, they are based on the principle of 
+- perceived throughput
+- avoid relayout
+- do work early
+
 
 
 What I talk about when I talk about responsive application
