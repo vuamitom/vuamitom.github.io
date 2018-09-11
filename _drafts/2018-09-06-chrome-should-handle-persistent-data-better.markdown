@@ -5,6 +5,7 @@ date: '2018-09-06 23:16:00'
 tags:
 - chromium
 - indexeddb
+- webapp
 ---
 
 As computation power and data are shifting to the edge, web applications are more and more like installed desktop applications with (limited) file system access, threading, offline storages... Frameworks such as Electron, which allow browser-based application to be packaged as standalone app, are gaining popularity. However, with great power comes great responsibility. Javascript, html, css have always been used to build webpages, which is a stateless and forgiving environment. A broken webpage can be remedied by hitting refresh button. The web is not used to be fast, users' expectation for it is lower than for an installed application. 
@@ -18,7 +19,7 @@ Though the web comes with 3 storage options: localStorage, WebSQL, Indexeddb, it
 In our case, Indexeddb is not just for cached data but rather main users' storage. Past users' generated data, which are not too important to occupy much server's storage space but at the sametime not discardable, are stored entirely on client machine. In other words, Indexeddb holds all of users' history. We would push down data to browser and expect Indexeddb to do what databases do, keep it. Unfortunately, we discovered later that Chrome (Electron) automatically wipes Indexeddb clean under a few circumstances.
 
 - To reclaim disk space when storage is strained. Though there is a so-called persistant api (documented [here](https://developers.google.com/web/updates/2016/06/persistent-storage)) which is supposed to request permission from user for examption from this policy, Chrome automatically denies the request if page is neither bookmarked nor highly engaged. Firefox handles persistent api much better by asking end users explicitly. Electron seems to grant persistent request just fine. 
-- To recover from previously corrupted state. This happens when host machine crashes while Chrome Indexeddb is opened, Indexedb is very likely to be corrupted. This is a known bug () but Chrome team won't fix it.  
+- To recover from previously corrupted state. This happens when host machine crashes while Chrome Indexeddb is opened, Indexedb is very likely to be corrupted. This is a [known bug](https://bugs.chromium.org/p/chromium/issues/detail?id=146284#). Chrome team won't fix it anytime soon.
 
 ##### Webish UI
 
