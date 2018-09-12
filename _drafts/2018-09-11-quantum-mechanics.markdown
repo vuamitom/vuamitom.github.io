@@ -23,5 +23,11 @@ Unlike Laplace demon, we can't determine future based on the state of the presen
 
 3.	Relational.
 
+Particles acquire properties such as velocity, angular momentum only in relation to others ( at collision )
 
+- relative speed
+- time is relative. The simultaneoity is relative to the motion of an object with respect to other?
+- up and down are relative???
+
+There is no subjective reality. Eistein. 
 
