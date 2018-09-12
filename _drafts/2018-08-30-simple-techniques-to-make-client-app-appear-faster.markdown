@@ -13,9 +13,15 @@ Here they are, in no particular order.
 
 1. Inline css background and spinner
 
+A lot of web app shows a spinner before loading complete to signal progress. It's best to base64 encode the resource file and embed it directly in the html page via data url. The browser won't waste another round trip to fetch the resource.
+
 2. Use throttling 
 
+Everything is expected to be instant. Search is one of them. Google make its an expectation that results get shown and updated as you type. However, it's a common mistake to keep hitting server with partial queries on every key stroke. Best to delay it a few ms after each keystroke such that subsequent query that are too close can be batched.
+
 3. delay spinner
+
+showing a spinner when a widget is first shown. It creates a flicker in layout. Better wait for a short while. E.g data load from localstorage (indexeddb)
 
 4. Cached image as blob
 
