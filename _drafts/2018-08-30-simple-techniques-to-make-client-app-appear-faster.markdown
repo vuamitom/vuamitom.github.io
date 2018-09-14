@@ -30,6 +30,9 @@ All in all, they are based on the principle of
 - avoid relayout
 - do work early
 
+5. Technique number 
+
+Or the best way to do it it's just not doing it at all. By doing nothing, you have the speed of nothingness. How long is nothingness, is it instantaneous or is it forever. Nothing is right here right now. But there is no end to nothingness, it can be said to have last forever. If there is nothing to use, there is no trouble about speed and then problem is solved. Everyone is happy. It's ok, it was as bad as it used to be 2 years ago when I first joined. Let think that starting over frequently is a good exercise. At the same time it's troubling. 2 years and starting over. It's my decision, let's own it and follow through to the end.
 
 
 What I talk about when I talk about responsive application
