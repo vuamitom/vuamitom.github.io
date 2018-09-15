@@ -1,0 +1,21 @@
+---
+layout: post
+title: Building full text search engine in javascript.
+date: '2018-09-16 00:16:00'
+tags:
+- science
+---
+
+Entropy is the amount of missing information. (information with minus sign)
+
+Claude Shanon defines entropy as a number of possible alternatives. An configuration not only exist on its own but is also correlate with another. Example given is 2 people talking over telephone line. What I'm hearing is corresponding with what you' re hearing. The atom in my brain determines the state of atom in yours. 
+
+In the book about "meaning of life...", entropy is defined as number of microscopic configuration that has a common macroscopic appearence. 
+
+Second law of thermal dynamics states that entropy is always increasing. Which means amount of missing information is increasing. 
+
+That is to say information can't increase by itself, unless external energy is supplied (in form of information)
+
+The world is harder to understand everyday. We understand the world better, as science progress, but the amount of missing information increases? 
+
+Think about a monotheist world where people worship one god, you know what on their mind. Think about a scientific world, people have different explanation? 
