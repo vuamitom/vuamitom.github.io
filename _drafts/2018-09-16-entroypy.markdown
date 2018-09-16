@@ -6,6 +6,8 @@ tags:
 - science
 ---
 
+http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
+
 Entropy is the amount of missing information. (information with minus sign)
 
 Claude Shanon defines entropy as a number of possible alternatives. An configuration not only exist on its own but is also correlate with another. Example given is 2 people talking over telephone line. What I'm hearing is corresponding with what you' re hearing. The atom in my brain determines the state of atom in yours. 
