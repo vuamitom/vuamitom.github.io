@@ -54,3 +54,7 @@ It's also about how our daily notion of time and space must change. Space is no 
 We don't really measure time. But measure something vs something else.
 
 Plank scale
+
+Do I feel smarter after the book. Definitely. I wished that my physics class in highschool has been this inspiring. 
+
+Someone once told me that people in math is better and smarter. But as Richard Feyman put its in his introduction (physics lesson with richard feyman), mathematician can apply a formula to any problem mechanically. Where physicist needs to really understand it intuitively. Like the way ray dalio understand about spacetime curving. It's like looking from the inside. A person walking along a curved path would return to his original position with his face to the opposite direction.
