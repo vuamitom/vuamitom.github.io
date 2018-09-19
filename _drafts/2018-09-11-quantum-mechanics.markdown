@@ -1,20 +1,19 @@
 ---
 layout: post
-title: Read "Reality is not what it seem"
+title:  "Reality is not what it seem" by Carlo D
 date: '2018-09-16 00:16:00'
 tags:
 - science
 - book
 ---
 
-The book is a glorified account of how scientific thinking of people who are brave enough to embrace uncertantiy, humble enough to admit the limit of their own ignorance, to question what have always been the norm (faith of the crowd)
+Dalio weaves the beautiful thread of atomicism from when it was first conceived by philosophers of antiquity (Democritus), through banishment under Christain Roman Empire to Renaissense and modern time. The book was both historical and scientific.  
 
-the book provides popular explanation about current understanding of reality, which should be combination of general relativity, quantum mechanics and thermal time. 
+It was a moving piece. From an early age of human civilization even before numbers and forumlas, people have been tempted to understand the nature of surrounding reality. Reasons were the ancient philosophers' tool. Hypothetical questions were asked (like Achille and turtle [link]). However, they still manage to reflect, question and propose a world view which is pretty close to mordern physics' explanation. It shows the power of intuition and vivid imagination. Thinkers like Democritus, Anexamandria, thought of the world as consisting of granualar atoms, which are the lower limit of divisibility of our physical world.
 
-The book is not only a science book, but also a history book. Turning to the first few pages, reader was brought back to more than 2 millenials ago, where the scientists of antiquity contemplate about the nature of reality. Scientific thinking was once flourished before the Roman empire adopt Christainity as the empire's official religion and ends tolerance for polytheism. 
+As the book progress, the initial picture of a world view digestable by our own perception (space, time, particles) slowly morph into a world where everything is convariant quantum field, and our own sense of space and time nolonger apply. In this world view, space is not something that contains, but it is the graivitational field, which in turn consists of quantas. (photons are quanta of electromagnetic field) the book provides popular explanation about current understanding of reality, which should be combination of general relativity, quantum mechanics and thermal time.  
 
-It was a moving piece. Thinker of antiquities without advances in mathametics, engineering, lack the equipments to experiment and observatory result. However, they still manage to reflect, question and propose a world view which is pretty close to mordern physics' explanation. It shows the power of intuition and vivid imagination. Thinkers like Democritus, Anexamandria, thought of the world as consisting of granualar atoms, which are the lower limit of divisibility of our physical world.
-
+Below are ideas that really stick:
 
 Particles and fields are one. 
 
@@ -55,6 +54,6 @@ We don't really measure time. But measure something vs something else.
 
 Plank scale
 
-Do I feel smarter after the book. Definitely. I wished that my physics class in highschool has been this inspiring. 
+The book is a glorified account of how scientific thinking of people who are brave enough to embrace uncertantiy, humble enough to admit the limit of their own ignorance, to question what have always been the norm (faith of the crowd)
 
-Someone once told me that people in math is better and smarter. But as Richard Feyman put its in his introduction (physics lesson with richard feyman), mathematician can apply a formula to any problem mechanically. Where physicist needs to really understand it intuitively. Like the way ray dalio understand about spacetime curving. It's like looking from the inside. A person walking along a curved path would return to his original position with his face to the opposite direction.
+Do I feel smarter after the book. Definitely. I wished that my physics class in highschool has been this inspiring. 

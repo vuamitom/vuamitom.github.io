@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Reality is not what it seem" by Carlo D
+date: '2018-09-16 00:16:00'
+tags:
+- science
+---
+
+Someone once told me that people in math is better and smarter. But as Richard Feyman put its in his introduction (physics lesson with richard feyman), mathematician can apply a formula to any problem mechanically. Where physicist needs to really understand it intuitively. Like the way ray dalio understand about spacetime curving. It's like looking from the inside. A person walking along a curved path would return to his original position with his face to the opposite direction.
+
+Eistein himself is not good at mathematics, which he said it himself. In a answering letter to a student. He needs help from other people. (Some one said, any student on abc street knows 4d geometry better than Eistein did).
+
+Faraday is another example. He was a poor book binder with no formal educaion in mathematics. He intuited Faraday lines, which serves as the medium through which electric or magnetic forces exert. Faraday lines was the basis for Maxwell's equation of electronmagnetic fields which is behind applications in modern communication like radio, telephone..
+
+Feyman said math and physics are different. 
