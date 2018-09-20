@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Reality is not what it seem" by Carlo D
+title:  Physics
 date: '2018-09-16 00:16:00'
 tags:
 - science
 ---
 
-Someone once told me that people in math is better and smarter. But as Richard Feyman put its in his introduction (physics lesson with richard feyman), mathematician can apply a formula to any problem mechanically. Where physicist needs to really understand it intuitively. Like the way ray dalio understand about spacetime curving. It's like looking from the inside. A person walking along a curved path would return to his original position with his face to the opposite direction.
+During school years, someone I know made a remark that mathematics is the toughest science subject. Math major students are likely to excel in other subjects such as physics, chemistry, not vice versa. It was hard not to take that remark personal as physics major student. I don't think it's fair to pass the verdict on a singluar form of intelligence. In fact, the more I read and learn about science and scientists, the more I think that comparison does not make sense. 
+
+Richard Feynman talked about the relation between mathematics and physics in his lectures on character of physics law. Mathematics deals with structure of abstract reasoning. In order to work out a conclusion, like, trajectory of an electron around the nucleaus, call the speed of electron N and work out from there. It's not even necessary for the mathematician to know what an electron is. Mathematics is a language in itself. Mathematician talks about things, from electron orbit to surface pressure to acceleraion, in the language of symbols and numbers. On the opposite, physicist always need to make sense of it in English (or any other human language) and create connections to the real world. Mathematics helps physics and physics helps mathematics. 
 
 Eistein himself is not good at mathematics, which he said it himself. In a answering letter to a student. He needs help from other people. (Some one said, any student on abc street knows 4d geometry better than Eistein did).
 
