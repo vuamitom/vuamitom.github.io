@@ -11,53 +11,22 @@ Dalio weaves the beautiful thread of atomicism from when it was first conceived 
 
 From an early age of human civilization people have been tempted to understand the nature of surrounding reality. Without sophisticated mathematical and engineering tools, ancient philosophers reflect and reason about phenomena observed in nature. They asked hypothetical questions such as Zeno's Achille and turtle [paradox](https://en.wikipedia.org/wiki/Zeno%27s_paradoxes)). The book has proved that, more than once in history, the sheer force of intuition and imagination led original thinkers to catch glimpses of the world view that mordern science would arrive at. Thinkers like Democritus, Anexamandria, thought of the world as swarm of indivisible grains just like quantas making up the world in mordern physics.Or the poet Dante who imagined a finite world but without limit. 
 
-As the book progresses, our own daily perception of reality with space, time and particles in space, emerges into a singular unified concept of covariant quantum fields. No longer is space a vacuum box in which objects occupy. Space is now mesh of gravitational field which curves nearer to objects. Time is no longer the underlying objective flow by which clock ticks and events unfold. Rather, it is the succession of events that create time. And in fact, we never really measure time itself. We instead count one thing with respect to other, like number of quartz viberations per clock tick, angle a clock hand moves versus movement of the sun...
+As the book progresses, our own daily perception of reality with space, time and particles in space, emerges into a singular unified concept of covariant quantum fields. No longer is space a vacuum box in which objects occupy. Space is now mesh of gravitational field which curves nearer to objects. Time is no longer the underlying objective flow by which clock ticks and events unfold. Rather, it is the succession of events that create time. And in fact, we never really measure time itself. We instead count one thing with respect to other, like number of quartz viberations per clock tick, angle a clock hand moves versus movement of the sun... The macroscopic world is static. A rock is standing still. A person is a stable whole. The microscopic world, on the contrary, is a spider of never ceasing events. We are constantly losing and gaining quanta from the surrounding. 
 
-(photons are quanta of electromagnetic field) the book provides popular explanation about current understanding of reality, which should be combination of general relativity, quantum mechanics and thermal time.  
+The book summarises quantum gravity with these three important characteristics:
 
-Below are ideas that really stick:
-
-Particles and fields are one. 
-
-Light are undulations of electronmagnetic field as much as swarm of photons.
-
-Other particles are as well quanta of a quantum field.
-
-It bought about property
 1.  Granualarity
 
-Democritus: There are a limit to divisibility.
-Eigenvalue equation: electron can not just take any velocity around a nucleus. It can only assume a finite number of velocities, momentums..., which is determined by eigenvalue equation. That is why we see spetral of light waves. Or electron only orbits at certain energy levels (???) 
+There is a limit to divisibility. Electron orbits around nucleus at certain energy levels rather than any random distance. If we keep dividing a piece of paper by half, it won't go on forever. Analog signal is not continuous, it is digital signal with very tiny sampling interval. The specific number that a thing can assume value is determined by Eigenvalue equation.
 
 2.	Indeterminacy.
 
-The world is not a world of particles, but rather it's a succession of micro events.On macro level, a stone looks still. But at the smallest level, it's fluctuations.
-
-We can't say for sure if a electron is going to the left. but only assign a probability to it. We don't know where and when it turns up, but how likely it will. 
-
-Unlike Laplace demon, we can't determine future based on the state of the present. Because the world at it's core is probabilistic.  
+The most important point is the picture of a world which is probabilistic at its core. Observing an electron moving in its orbit, we are not certain it will move left or right next. Only thing we know is how probable a path is. [Laplace's demon](https://en.wikipedia.org/wiki/Laplace%27s_demon) wouldn't be able to see the future with 100 percent certainty, even if he perceived the state of the present down to atoms.
 
 3.	Relational.
 
-Particles acquire properties such as velocity, angular momentum only in relation to others ( at collision )
+Properties such as velocity and angular momentum are not intrinsic to particles. Quanta like electron acquire those properties only at collision with each other. Outside those interactions, quanta are cloud of possibility to realize at the next interaction. Some other articles refer to this relational nature as electron having a property only when we look at it. (Wow, isn't it scary to say that we exist only when somebody looks at us?). Relativity is nothing new in science. Newton said that speed is relative between moving object and the observer. Direction is relative. Moving up and down is relative to the observer. Time is measured by counting occurences of one events relative to another.
 
-- relative speed
-- time is relative. The simultaneoity is relative to the motion of an object with respect to other?
-- up and down are relative???
+The book moves on to current frontier of mordern physics, which is to reconcicle general gravity and quantum mechanics. Can anything be both field and particle. Just like light are undulations of electronmagnetic field as much as swarm of photons. And the suggested way forward should be a combination of general relativity, quantum mechanics and thermal time.
 
-There is no subjective reality. Eistein. 
-
-
-
-
-It's also about how our daily notion of time and space must change. Space is no longer a container, time is nolonger the flow by which events unfold. But rather space is the gravitational field it self. time is another dimension of reality. Thinking about a spacetime foam. Space is the mesh in the surface, time is its height. Spacetime is a field, 
-
-We don't really measure time. But measure something vs something else.
-
-Plank scale
-
-The book is a glorified account of how scientific thinking of people who are brave enough to embrace uncertantiy, humble enough to admit the limit of their own ignorance, to question what have always been the norm (faith of the crowd)
-
-Do I feel smarter after the book. Definitely. I wished that my physics class in highschool has been this inspiring. 
-
-How long is the gap between theoretical awareness of the world function and practical application of it. For example, when talking about vincinity of blackhole, time passes super slow because gravitational field curves the most at the surface of the hole. We can really travel to the future, the hole idea in Doraemon actually works. We could see the end of this cycle of expanding and getting colder universe. However, we can't travel to the past. So anyone going on the trip to the future must up for not seeing people around them anymore. It must be a terrible decision to make. And what if the future is not liveable. What if a hundred years from now, the earth would no longer be inhabitable by human beings. Rats and crockroaches are everywehere. It's too much to pay for little return. 
+This is a crude summary of what I learned. There are definitely more to the book. For example, it's fascinating reading about how we could travel to a distant future by staying close to the surface of a blackhole, around which space curves and time passes slowly. Maybe we will be able to do that one day. (But i'm not sure who would be willing to go to an uncertain future without any mean of coming back.) 
