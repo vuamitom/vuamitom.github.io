@@ -15,15 +15,15 @@ As the book progresses, our own daily perception of reality with space, time and
 
 The book summarises quantum gravity with these three important characteristics:
 
-1.  Granualarity
+##### 1. Granualarity
 
 There is a limit to divisibility. Electron orbits around nucleus at certain energy levels rather than any random distance. If we keep dividing a piece of paper by half, it won't go on forever. Analog signal is not continuous, it is digital signal with very tiny sampling interval. The specific number that a thing can assume value is determined by Eigenvalue equation.
 
-2.	Indeterminacy.
+##### 2. Indeterminacy.
 
 The most important point is the picture of a world which is probabilistic at its core. Observing an electron moving in its orbit, we are not certain it will move left or right next. Only thing we know is how probable a path is. [Laplace's demon](https://en.wikipedia.org/wiki/Laplace%27s_demon) wouldn't be able to see the future with 100 percent certainty, even if he perceived the state of the present down to atoms.
 
-3.	Relational.
+##### 3. Relational.
 
 Properties such as velocity and angular momentum are not intrinsic to particles. Quanta like electron acquire those properties only at collision with each other. Outside those interactions, quanta are cloud of possibility to realize at the next interaction. Some other articles refer to this relational nature as electron having a property only when we look at it. (Wow, isn't it scary to say that we exist only when somebody looks at us?). Relativity is nothing new in science. Newton said that speed is relative between moving object and the observer. Direction is relative. Moving up and down is relative to the observer. Time is measured by counting occurences of one events relative to another.
 
