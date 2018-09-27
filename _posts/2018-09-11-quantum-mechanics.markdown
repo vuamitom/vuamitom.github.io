@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reality is not what it seem" by Carlo Rovelli
+title:  Reality is not what it seem by Carlo Rovelli
 date: '2018-09-16 00:16:00'
 tags:
 - science
@@ -30,4 +30,3 @@ Properties such as velocity and angular momentum are not intrinsic to particles.
 The book moves on to current frontier of mordern physics, which is to reconcicle general gravity and quantum mechanics. Can anything be both field and particle. Just like light are undulations of electronmagnetic field as much as swarm of photons. And the suggested way forward should be a combination of general relativity, quantum mechanics and thermal time.
 
 This is a crude summary of what I learned. There are definitely more to the book. For example, it's fascinating reading about how we could travel to a distant future by staying close to the surface of a blackhole, around which space curves and time passes slowly. This idea has been used in science fiction story such as [Winter's King](https://en.wikipedia.org/wiki/Winter%27s_King) by Ursula Le Guin. Maybe we will be able to do that one day. (But i'm not sure who would be willing to go to an uncertain future without any mean of coming back.) 
-
