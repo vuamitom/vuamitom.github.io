@@ -18,6 +18,8 @@ First I'm going to rebuke some of the myth of using blockchain
 - case B: why blockchain is necessary here? ethermon, cryptokittens? 
 - case C:....
 
+Yuval Noah write in Sapiens that things in life like comppanies, organizations, money, economy was created/conceived by human's common narrative, or a "figment of human imagination". Crypto currencies embody that more than anything else. One day a man named Satoshi published a paper, and the next day, sequence of bits in computer take on value. It does not cease to exist. It does not lose value (for that to happen, everyone on earth need to stop believeing in it. Or they should have a larger, newer narrative to believe in)
+
 I think the value of blockchain would most likely comes from cost saving. Benefactors would be associations, gov orgs, where db need to open to outsiders. Single source of truth, avoid the need to replicate data between organization. (give a before vs after example here). No need to design an API ( the old way,) but the ledger  protocol is already popular. ==> cost saving in terms of development and information cost (dont have to training, communicating api )
 
 Secondly, it is distributed. If done right, it will shows other app how to handle authentication/auth in a distributed setting. Say about POS application. Application which is offline first. You add node later on when you need it. there is no server in between. 
