@@ -1,16 +1,33 @@
 ---
 layout: post
-title:  What is blockchain and crypto currencies for
+title:  Blockchain and Cryptocurrencies
 date: '2018-09-27 00:16:00'
 tags:
 - blockchain
 ---
 
-Major characteristics of a blockchain
+Generally speaking, blockchain can be thought of as an ledger which, technically, can be viewed by anyone. This one-liner summarization can risk oversimplifying blockchain's value and thus riding its of it merit. But it is no small feat to be open and at the same time functional and resilient against frauds, technical hiccups and human faults. If I was to setup my own online ledger with its database, and open it in service of the world, it would probably go down in seconds (assuming that it got people attention). Hackers would try to shoot it down. Overly active tinkerers would randomly credit their accounts with imaginary amount. 
+
+Blockchain solved the first problem by being distributed. The blockchain data replicates itself on thousands of computer carrying it, let's call it blockchain nodes. Now, if hackers attacked my blockchain node and wiped it out entirely, nobody would lose access to the blockchain data as there are backups all over places. Except for the trouble of having to setuping up my node over again, I would not loose much. 
+
+Secondly, blockchain make you pay for value creation with your computing power. You can't pull a block out of thinair, it needs to be solved cryptographically harder and harder equation. [search more on this]
+
+Back to being distributed. Being distributed solves one problem and create another. If both of you and me owns a copy of the ledger, and they differ. How can we determine which one is the honest one. Here proof of work comes into play. PoW dictates that the longer your chain is, the more trustworthy your blockchain is. Why? Because it takes time to create a new block. If the culprit does not have enough computing power to overtake honest majority, he won't be able to fake it. If he does, it would make more sense for him to just create his own blockchain.
+
+So with the ability to solve double-spending problem, and operate without an immediatories (absense of trust), blockchain is overhyped with promises. But largely it's still a solution waiting for a (practical) problem.
+
+Blockchain promises to display financial incumbents. But transferring money between parties are not the only thing they do.
+
+Blockchain is a database. however, it does not store all the data. Most current application is hybrid. And use blockchain for only the critical part that they don't want to lose, or want ot open it, or want it to be stable. However, since not all data is there, there is still posibility that the off-chain data is fake, tampered with.
+
+Blockchain promises to display government. yet self-governing is not easy. There scam, fraud. Can it protect from ourselves. For example. Bitcoin Cash was created, deprecitated value of the bitcoin. (Same as government printing money) 
+
+The blockchain ledger would go down only if all of the thousands of machines hosting it went down.  
 - distributed
 - open and immutability
 - concensus at the absense of trust (PoW)
 
+All of that 
 
 Blockchain is more like a solution seeking a problem.
 First I'm going to rebuke some of the myth of using blockchain
@@ -19,6 +36,9 @@ First I'm going to rebuke some of the myth of using blockchain
 - case C:....
 
 Yuval Noah write in Sapiens that things in life like comppanies, organizations, money, economy was created/conceived by human's common narrative, or a "figment of human imagination". Crypto currencies embody that more than anything else. One day a man named Satoshi published a paper, and the next day, sequence of bits in computer take on value. It does not cease to exist. It does not lose value (for that to happen, everyone on earth need to stop believeing in it. Or they should have a larger, newer narrative to believe in)
+
+We are creating crypto currencies to protect ourselves from evil government, ineffictive intermediatries. But what if we are enemies of ourselves. What if the do-gooders turn into incumbents. They still have a monopoly over information. That is why fraud and scam happens. 
+
 
 I think the value of blockchain would most likely comes from cost saving. Benefactors would be associations, gov orgs, where db need to open to outsiders. Single source of truth, avoid the need to replicate data between organization. (give a before vs after example here). No need to design an API ( the old way,) but the ledger  protocol is already popular. ==> cost saving in terms of development and information cost (dont have to training, communicating api )
 
