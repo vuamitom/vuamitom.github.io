@@ -5,16 +5,19 @@ date: '2018-09-27 00:16:00'
 tags:
 - blockchain
 ---
+First I need to decide whether I talk about blockchain only or blockchain and cryptocurrencies.
 
 Generally speaking, blockchain can be thought of as an ledger which, technically, can be viewed by anyone. This one-liner summarization can risk oversimplifying blockchain's value and thus riding its of it merit. But it is no small feat to be open and at the same time functional and resilient against frauds, technical hiccups and human faults. If I was to setup my own online ledger with its database, and open it in service of the world, it would probably go down in seconds (assuming that it got people attention). Hackers would try to shoot it down. Overly active tinkerers would randomly credit their accounts with imaginary amount. 
 
 Blockchain solved the first problem by being distributed. The blockchain data replicates itself on thousands of computer carrying it, let's call it blockchain nodes. Now, if hackers attacked my blockchain node and wiped it out entirely, nobody would lose access to the blockchain data as there are backups all over places. Except for the trouble of having to setuping up my node over again, I would not loose much. 
 
-Secondly, blockchain make you pay for value creation with your computing power. You can't pull a block out of thinair, it needs to be solved cryptographically harder and harder equation. [search more on this]
+Secondly, blockchain make you pay for value creation with your computing power. You can't pull a block out of thinair, it needs to be solved cryptographically harder and harder equation. [search more on this] Another popular algo is proof of stake.
 
 Back to being distributed. Being distributed solves one problem and create another. If both of you and me owns a copy of the ledger, and they differ. How can we determine which one is the honest one. Here proof of work comes into play. PoW dictates that the longer your chain is, the more trustworthy your blockchain is. Why? Because it takes time to create a new block. If the culprit does not have enough computing power to overtake honest majority, he won't be able to fake it. If he does, it would make more sense for him to just create his own blockchain.
 
 So with the ability to solve double-spending problem, and operate without an immediatories (absense of trust), blockchain is overhyped with promises. But largely it's still a solution waiting for a (practical) problem.
+
+Blockchain is currently used mostly as backing of crypto currencies. What of crypto currencies? It has advantages blockchain have to offer. And some cases we feel like only crypto currencies is a solution. Like a token to incentivize services (bittorrent with TRON, telegram, kambria,...). What would happen if we don't use blockchain. Technically, distributed service at heart like bittorrent would need to invent similar infrastructure. Thus blockchain is the missing piece. If it was to invent it all in a centralized fashion, would hinder the usefulness and transferrability of the new token. End some other micropayment (like in IoT renting). Just imagine the alternative. Like having a server recording all transaction (no real money move, just flip of byte and bit in database). The resulting action would be to have interface, and transfer money behind the scene via bank accounts. (It would not create a vibrant ecosystem). In this sense, "open" ledger leads to exchangability and spendability of money token. We can draw a comparision from traditional loyaty program (points). It is not a must. But more elegant a solution.
 
 Blockchain promises to display financial incumbents. But transferring money between parties are not the only thing they do.
 
