@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  Blockchain and Cryptocurrencies
+title:  A world without blockchain
 date: '2018-09-27 00:16:00'
 tags:
 - blockchain
 ---
-First I need to decide whether I talk about blockchain only or blockchain and cryptocurrencies.
+Blockchain and cryptocurrencies is an area that has attracted lots of fanfare. It's heralded by visionaries to be revolutionizing finance, governance, retail and many other areas. In other word, applications that used to be hard or impossible to do now are feasible because of blockchain. Or is it really the case? Let's take on the perspective of a blockchain skeptic to see if we can do what's blockchain application doing now without using the blockchain. 
 
 ##### Characteristics of blockchain
 
@@ -71,3 +71,9 @@ Look we already own digital money since the prevailance of internet and mobile b
 
 Blockchain application can be categorized as crypto currencies application and pratical applications. Crypto currency application was app born out of the need for a new ecosystem that supports that new technology, such as trading, wallet, market watch. It treats crypto currency as a foreground thing, the purpose and the end meet. Whereas other applications leverage blockchain and crypto currencies as a way to solve real world problem. The latter is more rare. 
 
+
+##### Use case 1: financial system and assets
+
+##### Use case 2: Micro incentives
+
+##### Use case 3: Mirroring physical world (cryptokittens, etheremon)
