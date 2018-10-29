@@ -4,6 +4,7 @@ title:  A world without blockchain
 date: '2018-09-27 00:16:00'
 tags:
 - blockchain
+- discardable
 ---
 Blockchain and cryptocurrencies is an area that has attracted lots of fanfare. It's heralded by visionaries to be revolutionizing finance, governance, retail and many other areas. In other word, applications that used to be hard or impossible to do now are feasible because of blockchain. Or is it really the case? Let's take on the perspective of a blockchain skeptic to see if we can do what's blockchain application doing now without using the blockchain. 
 
