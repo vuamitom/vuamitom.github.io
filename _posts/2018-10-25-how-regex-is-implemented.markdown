@@ -8,11 +8,11 @@ tags:
 
 Recently at work, I need to take a deeper look at how optimization is done by different regex libraries and how they combine regex patterns. This document is examining 2 regex implementations: `java.util.regex` of [OpenJDK](https://github.com/openjdk-mirror/jdk7u-jdk/tree/master/src/share/classes/java/util/regex) and `re2` of [Google](https://github.com/google/re2). 
 
-#### 1. A look under the hood
+## 1. A look under the hood
 
 Conceptually, both libraries start with parsing regex string into a concrete syntax tree and then use it to process input strings. However, Google's `re2` when further by compiling this syntax tree into more primitive byte range based instructions and then creates a DFA for the input string.
 
-##### OpenJDK
+### OpenJDK
 
 OpenJDK is straighforward in its internal tree(graph) based representation of regex. A logical component in the input regex is represented by a node e.g: LiteralNode for char literal 'a', CurlyNode for literal with quantifiers b+ ... Each node possesses a `next` reference to the one after it. Doing regex matching is as simple as running from top node down to last node. Pseudocodely, it's like:
 
@@ -22,17 +22,17 @@ is_match(str) = match(root, str[i]) && match(root.next, str[i+1:])
 
 OpenJDK does not do much optimization other than using [Boyer-Moore search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm) on sequence of literals.
 
-##### Google Re2
+### Google Re2
 
 Compared to OpenJDK, Google `re2` employs many more optimization techniques at different phases of process. Conceptually, `re2` engine works in 3 phases: firstly it parses regex string into a syntax tree which is roughly similar to OpenJDK, secondly it compiles this syntax tree into simple instructions, and lastly, at matching time, it generates a DFA.
 
-###### a. Parse Regex String
+#### a. Parse Regex String
 
 Similar to OpenJDK, at this step, the engine reads a regex string and returns a tree of nodes with opcode and reference to adjacent node. Some minor optimization is done at this step including:
 
 - Special cases for character class: single char class to a literal e.g [.] as this is commonly used to escape the '.' literal. Or [Aa] to literal A with ASCII case folding.
 
-- Factors common prefixes from alternation. ABC|ABD|AEF|BCX|BCY simplifies to A(B(C|D)|EF)|BC(X|Y) and then to A(B[CD]|EF)|BC[XY]. E.g:
+- Factors common prefixes from alternation. `ABC|ABD|AEF|BCX|BCY` simplifies to `A(B(C|D)|EF)|BC(X|Y)` and then to `A(B[CD]|EF)|BC[XY]`. E.g:
 
 ```
 ab+cd|abc+d -> a(?:b+cd|bc+d)
@@ -52,7 +52,7 @@ ab{2,}cd --> abb+c
 ab{1,}cd --> ab+c
 ```
 
-###### b. Compile to instructions
+#### b. Compile to instructions
 
 This step converts the tree representation in the above step into an ordered list of instructions. Instructions are primitive, mostly byte range matching. Consider a simple regex `ab|cd`, running through this step will become:
 
@@ -85,13 +85,13 @@ Last but not least, a byte map from char range to instruction id is created usin
 [64-64] -> 4
 [65-ff] -> 0
 ```
-###### c. Create DFA to search input string
+#### c. Create DFA to search input string
 
 This last step happens when the compiled regex obtained from previous step is used to match an input string. A DFA can be thought of as a form of caching. The matching execution starts with a state s, and for each byte c in input string, do `s = s->next[c]`, and then check if `s` represents a matching state. `s->next` is constructed lazily (incrementally). When a input byte `c` is processed and `c` does not exist in `s->next`, the next state n will be computed based on instructions stored in `s`. Then n will be stored by `s->next[c] = n`. 
 
 DFA makes for a very simple runtime. Unlike `OpenJDK` which have most of its if-else logic happen at matching time, `re2` 's matching logic is reduced to simple map lookups. 
 
-#### 2. Implication for combining regular expression
+## 2. Implication for combining regular expression
 
 To combine any random regular expression, the crude thing to do is to combine them using alternate operator `|`. In that case, `java.util.regex` simply using a `BranchNode` to connect the two expression tree, which results in a performance similar to running those expressions separately. 
 
