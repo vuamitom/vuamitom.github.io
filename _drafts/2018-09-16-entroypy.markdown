@@ -21,3 +21,13 @@ That is to say information can't increase by itself, unless external energy is s
 The world is harder to understand everyday. We understand the world better, as science progress, but the amount of missing information increases? 
 
 Think about a monotheist world where people worship one god, you know what on their mind. Think about a scientific world, people have different explanation? 
+
+
+
+Bit is a binary digit
+
+
+
+Information theory is related to probability theory. [The world is built on probability]
+
+Or bit is the maximum amount of information that a digit which can assume 2 different values hold, given 2 value have equal probability. 

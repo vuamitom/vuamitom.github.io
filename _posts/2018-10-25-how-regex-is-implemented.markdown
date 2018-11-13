@@ -6,7 +6,7 @@ tags:
 - engineer
 ---
 
-As we set out to improve upon the performance of regex used in many parts of Zalo operation, it's necessary to understand kinds of optimizations that have been implemented by off the shelf regex libraries. This document is examining 2 regex implementations: `java.util.regex` of [OpenJDK](https://github.com/openjdk-mirror/jdk7u-jdk/tree/master/src/share/classes/java/util/regex) and `re2` of [Google](https://github.com/google/re2). 
+Recently at work, I need to take a deeper look at how optimization is done by different regex libraries and how they combine regex patterns. This document is examining 2 regex implementations: `java.util.regex` of [OpenJDK](https://github.com/openjdk-mirror/jdk7u-jdk/tree/master/src/share/classes/java/util/regex) and `re2` of [Google](https://github.com/google/re2). 
 
 #### 1. A look under the hood
 
@@ -76,7 +76,7 @@ After flattening to remove `alt` instruction:
 7. byte [64-64] -> 6
 ```
 
-Last but not least, a byte map from char range to instruction id is created. Later on, when an input character is process, appropriate instruction id is looked up using this map. 
+Last but not least, a byte map from char range to instruction id is created using coloring algorithm. Later on, when an input character is process, appropriate instruction id is looked up using this map. 
 ```
 [00-60] -> 0
 [61-61] -> 1
@@ -96,9 +96,3 @@ DFA makes for a very simple runtime. Unlike `OpenJDK` which have most of its if-
 To combine any random regular expression, the crude thing to do is to combine them using alternate operator `|`. In that case, `java.util.regex` simply using a `BranchNode` to connect the two expression tree, which results in a performance similar to running those expressions separately. 
 
 On the other hand, Google `re2` can optimize for simple cases such as common prefix. And internally, it creates a single bytemap lookup for all branches.
-
-
-##### Some additional concept in handling Unicode
-
-- Surrogate pairs: pair of code points that make up a single character
-- canonical equivalence: an unicode character can be represented by different set of codepoint(s). Codepoints are said to be canonically equivalent when they have the same appearance in print or on display (i.e canonical decomposition)
