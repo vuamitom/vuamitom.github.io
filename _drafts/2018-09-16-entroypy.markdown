@@ -31,3 +31,6 @@ Bit is a binary digit
 Information theory is related to probability theory. [The world is built on probability]
 
 Or bit is the maximum amount of information that a digit which can assume 2 different values hold, given 2 value have equal probability. 
+
+
+From "the world is built on probability": entropy is also a measure of irreversibility. Physics process can be categoried into reversible and irreversible process. For irreversible process, entropy is always increasing, according to 2nd law of thermodynamics.
