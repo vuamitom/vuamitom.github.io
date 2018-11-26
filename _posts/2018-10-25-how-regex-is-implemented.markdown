@@ -75,9 +75,24 @@ After flattening to remove `alt` instruction:
 6. match! 0
 7. byte [64-64] -> 6
 ```
+#### c. Create DFA to search input string
 
-Last but not least, a byte map from char range to instruction id is created using coloring algorithm. Later on, when an input character is process, appropriate instruction id is looked up using this map. 
+This last step happens when the compiled regex obtained from previous step is used to match an input string. A DFA can be thought of as a form of caching. The matching execution starts with a state s, and for each byte c in input string, do `s = s->next[c]`, and then check if `s` represents a matching state. `s->next` is constructed lazily (incrementally). When a input byte `c` is processed and `c` does not exist in `s->next`, the next state n will be computed based on instructions stored in `s`. Then n will be stored by `s->next[c] = n`. 
+
 ```
+(Excerpt from source comment)
+// The basic idea is that the State graph is constructed so that the
+// execution can simply start with a state s, and then for each byte c in
+// the input string, execute "s = s->next[c]", checking at each point whether
+// the current s represents a matching state.
+```
+
+However, having a transition table for each character in every state is very memory consuming. To reduce memory usage, the library creates a list of non-overlapping character ranges from the above state machine using coloring algorithm. The idea is that characters in the same range result in the same transition given a source state, thus can be treated as one, which reduces size of `next` state map, and at the same time increase cache hitting rate. 
+
+The above example `ab|cd` regex is compiled into below bytemap, which results in only 5 different possible transitions instead of 256 characters a-z. 
+
+```
+// Note that 0, 1, 2 ... can be thought of as transition id, which is not the same as state id in step b. 
 [00-60] -> 0
 [61-61] -> 1
 [62-62] -> 2
@@ -85,11 +100,11 @@ Last but not least, a byte map from char range to instruction id is created usin
 [64-64] -> 4
 [65-ff] -> 0
 ```
-#### c. Create DFA to search input string
 
-This last step happens when the compiled regex obtained from previous step is used to match an input string. A DFA can be thought of as a form of caching. The matching execution starts with a state s, and for each byte c in input string, do `s = s->next[c]`, and then check if `s` represents a matching state. `s->next` is constructed lazily (incrementally). When a input byte `c` is processed and `c` does not exist in `s->next`, the next state n will be computed based on instructions stored in `s`. Then n will be stored by `s->next[c] = n`. 
 
 DFA makes for a very simple runtime. Unlike `OpenJDK` which have most of its if-else logic happen at matching time, `re2` 's matching logic is reduced to simple map lookups. 
+
+
 
 ## 2. Implication for combining regular expression
 

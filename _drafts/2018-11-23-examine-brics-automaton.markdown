@@ -14,3 +14,6 @@ There seem to be a number of pruning:
 
 - remove dead state: state is considered dead if it is not reachable from any valid state.
 - reduce: combine adjacent and overlapping edges with the same destination.
+
+
+The idea of brics is simpler. It creates a dfa, states of which contains map from input characters to transition to another state. A similar optimization to Google Re2 is that it sought to group characters into non overlapping byte ranges, each of which lead to single transition from a given state. 
