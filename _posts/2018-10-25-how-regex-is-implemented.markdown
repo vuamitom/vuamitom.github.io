@@ -20,7 +20,7 @@ OpenJDK is straighforward in its internal tree(graph) based representation of re
 is_match(str) = match(root, str[i]) && match(root.next, str[i+1:])
 ```
 
-OpenJDK does not do much optimization other than using [Boyer-Moore search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm) on sequence of literals.
+OpenJDK does not do much optimization other than using [Boyer-Moore search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm) on sequence of literals. (A colleague pointed out to me that [KMP algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) is an alternative)
 
 ### Google Re2
 
