@@ -101,10 +101,7 @@ The above example `ab|cd` regex is compiled into below bytemap, which results in
 [65-ff] -> 0
 ```
 
-
 DFA makes for a very simple runtime. Unlike `OpenJDK` which have most of its if-else logic happen at matching time, `re2` 's matching logic is reduced to simple map lookups. 
-
-
 
 ## 2. Implication for combining regular expression
 
