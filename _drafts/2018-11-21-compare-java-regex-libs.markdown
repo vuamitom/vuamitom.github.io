@@ -48,7 +48,9 @@ For each regex library, the above list of regex string are run either separately
 #### Result
 
 ##### java.util.regex
+
 | Time | Union with capturing group | Union no capture | Separate run |
+| ------ | ------ | ------ | ------ |
 | Regex compilation | 1ms | 1ms | 0ms |
 | Match 1500+ short sentences set (100 iterations) | 6715ms | 6832ms | 5139ms | 
 | Match 300 long sentences set (10 iterations) | 749ms | 780ms | 107636ms | 
@@ -56,6 +58,7 @@ For each regex library, the above list of regex string are run either separately
 ##### com.google.re2
 
 | Time | Union with capturing group | Union no capture | Separate run |
+| ------ | ------ | ------ | ------ |
 | Regex compilation | 2ms | 30ms | 1ms |
 | Match 1500+ short sentences set (100 iterations) | 32577ms | 24084ms | 18278ms | 
 | Match 300 long sentences set (10 iterations) | 3519ms | 2573ms | 153393ms | 
@@ -63,6 +66,7 @@ For each regex library, the above list of regex string are run either separately
 ##### dk.brics.automaton
 
 | Time | Union with capturing group | Union no capture | Separate run |
+| ------ | ------ | ------ | ------ |
 | Regex compilation | 43ms | 122ms | 47ms |
 | Match 1500+ short sentences set (100 iterations) | 190ms | 183ms | 2059ms | 
 | Match 300 long sentences set (10 iterations) | 18ms | 45ms | 53051ms | 
