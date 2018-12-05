@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Misconceptions when scale applications
-date: '2018-10-25 11:04:00'
+date: '2018-11-13 11:04:00'
 tags:
 - engineer
 ---

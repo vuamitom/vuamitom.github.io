@@ -33,6 +33,7 @@ paginate: 10
 #   sort_field: 'date'
 #   sort_reverse: true
 markdown: kramdown
+mathjax: true
 theme: minima 
 plugins:
   - jekyll-feed

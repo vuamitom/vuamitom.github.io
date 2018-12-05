@@ -24,3 +24,7 @@ comments: true
   {% endif %}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+{%- if page.mathjax -%}
+  {%- include mathjax.html -%}
+{%- endif -%}
