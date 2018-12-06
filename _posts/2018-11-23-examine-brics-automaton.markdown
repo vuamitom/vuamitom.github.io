@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How regex is implemented: brics library
+title: How dk.brics.automaton regex library works
 date: '2018-11-22 10:16:00'
+mathjax: true
 tags:
 - engineer
 ---
@@ -189,9 +190,29 @@ state 4 [reject]:
 
 #### Review of Hopcroft DFA minimization
 
+Most minimization algorithm works by paritioning the initial set of coarse states into smaller sets, within which, states are equivalent. Equivalent states are states that, given a sequence of input characters, would all eventually transit into either accepting or rejecting output (i.e either a match or non-match result). Implementation differs. Among the choices of minimization alogrithm, [Hopcroft](http://i.stanford.edu/pub/cstr/reports/cs/tr/71/190/CS-TR-71-190.pdf) with time complexity of NlogN is probably the fastest generic minimization algorithm. 
+
+Here is a summary of how Hopcroft works, given a automaton \\(A\\{S, I, f, F\\}\\) with S is the set of initial states, I is the set of possible input characters, f(s, i) is the transition mapping function and F is the set of terminating states.
+
+Step 1. For each state in S, it backtracks by one transition, to obtain a set of states:
+
+\\[ f^-1(s,i) = \\{t \| f(t,i) = s\\} \\]
+
+Step 2. Dividing set of states obtained from above step into accepting and rejecting subset. 
+
+\\[ A_{1} = \\{t \| t \in F \\} \\]
+\\[ A_{2} = X - A_{1} \\]
+
+Now we have X as as set of partitions. \\( X = \\{ A_{1}, A_{2} \\} \\)
+
+Step 3. Select a parition, and a input character i, say \\((A_{2}, i)\\). Then loop through existing partitions in X to see if each need to be split further. A partition \\(A_{j}\\) need to be split in this iteration if, there exists state s in A that \\( f(s, i) \notin A_{2} \\). If no, we don't need to consider \\((A_{2}, i)\\) again. If yes, \\(A_{j}\\) is then split into set of states that transit into \\(A_{j}\\) and states that don't. And then choose the smaller set in next iteration of step 3.
+
+Step 4. Iterations in step 3 stop when no partition can be further divided. 
 
 #### References
 
-http://www-igm.univ-mlv.fr/~berstel/Exposes/2009-06-08MinimisationLiege.pdf
+1. [http://www-igm.univ-mlv.fr/~berstel/Exposes/2009-06-08MinimisationLiege.pdf](http://www-igm.univ-mlv.fr/~berstel/Exposes/2009-06-08MinimisationLiege.pdf)
 
-https://en.wikipedia.org/wiki/DFA_minimization
+2. [Wikipedia DFA Minimization](https://en.wikipedia.org/wiki/DFA_minimization)
+
+3. [A N log N algorithm for minimizing states in a finite automaton](http://i.stanford.edu/pub/cstr/reports/cs/tr/71/190/CS-TR-71-190.pdf)

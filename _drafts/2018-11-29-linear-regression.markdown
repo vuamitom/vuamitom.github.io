@@ -43,7 +43,7 @@ NOTE: it's not mandatory to have probability implication
 
 #### Reference
 
-[1] [Pattern and recognition in marchine learning](http://cs231n.github.io/linear-classify/)
+1. [Pattern and recognition in marchine learning](http://cs231n.github.io/linear-classify/)
 
 
 #### Note to myself
