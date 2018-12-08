@@ -24,22 +24,31 @@ MSE is the scalar difference between hypothesized value and expected value, and 
 
 \\[J(\theta) = \frac{1}{2M} \sum_{i=1}^{M} (h_{\theta}(x_{i}) - y_{i})^2\\]
 
-For classification, it is less intuitive to visualize loss in the same way. Reason is, it is hard to quantify difference between hypothesized class and expected output class. Say, a machine learning model to classify animals. How much output cat differs from output dog is not quantitative. Instead, the probability perspective introduced below seem to be a more natural approach. Still, it is possible to devise a cost function 
+For classification, it is less intuitive to visualize loss in the same way. Reason is, it is hard to quantify difference between hypothesized class and expected output class. Say, a machine learning model to classify animals. How much output cat differs from output dog is not quantitative. The simplest possible approach is that, we can use discriminant functions to map from input to a scalar value e.g \\(f_{theta}(x) = y\\), and then use a threshold value to assign output class e.g positive output if \\(y > 0\\). MSE can then be used here as the loss function. Though it suffers some drawbacks like being sensitive to outliers and limited to guassian distribution of output \[1\].
 
-SVM classification and hingeloss function
+Still, it is possible to devise a cost function 
+
+Another example is SVM classification and hingeloss function. Hingeloss is a loss function which accumulates when the difference between score of correct class and an incorrect one is below certain threshold.
+
+\\[J(\theta) = \\]
 
 #### Maximum likelihood perspective
 
-To solve theta for likelihood equation to maximize. By sovling it, we will realize that it is equivalent to least square error.
+This approach seem to be more intuitive for classification problem. Given an input \\(x\\), K possible classes and expected output \\(C_{j}\\) 1 <= j <= K, the model should maximize the conditional probability of \\(P_{\theta}(C_{j}\|x)\\). To determine this class conditional probability, one can either uses the `generative modelling` or `discriminative modelling` approach. The former involves finding out the prior \\(P(x\|C_{j})\\) and input distribution \\(P(x)\\) and then infer posteri via Bayesian rule:
 
-Maximum likelihood vs least square error
+\\[ P_{\theta}(C_{j}\|x) = \frac{P_{\theta}(x\|C_{j} P(C_{j}))}{P(x)}\\]
 
-In classification problem, we often need to assign a probability to a class of output given input P theta (y | x)
+However, determining the input distribution \\(P(x)\\) can be costly for some dataset. So we often directly model posterior \\(P_{\theta}(C_{j}\|x)\\) and tweak \\(\theta\\) to maximize it (discriminative modelling). With m as number of samples:
 
-That probability is a Bayesian prior, not a frequentist' probability. The training process is to update our posterior with lost calculation and then feed that back to training. 
+\\[ P_{\theta}(Y\|X) = \prod_{i=1}^{m} P_{\theta}(y_{i}|x_{i})\\]
+
+If we model \\(P_{\theta}(y_{i}|x_{i})\\) with softmax function, we can have the cost function as:
+
+\\[ P_{\theta}(Y\|X) = \prod_{i=1}^{m} \prod_{j=1}^{K} 1{y_{i} == j} softmax(j, \theta, X)\\]
 
 
-NOTE: it's not mandatory to have probability implication 
+(By assuming a guassian distribution, sovling it, we will realize that it is equivalent to least square error).
+
 
 #### Reference
 
