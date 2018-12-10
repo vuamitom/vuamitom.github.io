@@ -24,7 +24,7 @@ MSE is the scalar difference between hypothesized value and expected value, and 
 
 \\[J(\theta) = \frac{1}{2M} \sum_{i=1}^{M} (h_{\theta}(x_{i}) - y_{i})^2\\]
 
-For classification, it is less intuitive to visualize loss in the same way. Reason is, it is hard to quantify difference between hypothesized class and expected output class. Say, a machine learning model to classify animals. How much output cat differs from output dog is not quantitative. The simplest possible approach is that, we can use discriminant functions to map from input to a scalar value e.g \\(f_{theta}(x) = y\\), and then use a threshold value to assign output class e.g positive output if \\(y > 0\\). MSE can then be used here as the loss function. Though it suffers some drawbacks like being sensitive to outliers and limited to guassian distribution of output \[1\].
+For classification, it is less intuitive to visualize loss in the same way. An somewhat simplified reason is, it is hard to quantify difference between hypothesized class and expected output class. Say, a machine learning model to classify animals. How much output cat differs from output dog is not quantitative. The simplest possible approach is that, we can use discriminant functions to map from input to a scalar value e.g \\(f_{theta}(x) = y\\), and then use a threshold value to assign output class e.g positive output if \\(y > 0\\). MSE can then be used here as the loss function. Though it suffers some drawbacks like being sensitive to outliers, gradient vanishing and limited to guassian distribution of output \[1\].
 
 Still, it is possible to devise a cost function 
 
