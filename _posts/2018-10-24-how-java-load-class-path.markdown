@@ -3,7 +3,7 @@ layout: post
 title:  How java load classes
 date: '2018-10-24 16:00:00'
 tags:
-- rambling
+- technical
 ---
 
 For a while, I have delegated the task of managing java run command to IDE. Eclipse, Netbean and IntelliJ and all seem to do a decent job of masking away complexity of supplying java with JVM parameters, classpath, debugging options... Compared to other languages, the java run command can get horrendously long, not very suitable for handcrafting. Recently, when working on some sort of command generating at work and playing around with java command line arguments, I encountered some minor gotchas. 

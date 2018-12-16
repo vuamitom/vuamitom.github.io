@@ -5,6 +5,7 @@ date: '2018-10-08 00:16:00'
 tags:
 - work
 - principle
+- life
 ---
 
 > The road to hell is paved with good intentions

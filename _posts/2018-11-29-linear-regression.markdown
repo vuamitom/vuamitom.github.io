@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  Perspectives in designing cost function
-date: '2018-11-29 00:16:00'
+title:  Perspectives in designing ML cost function
+date: '2018-12-16 00:16:00'
 mathjax: true
 tags:
 - machine learning
+- technical
 ---
 
 For many different machine learning problems, finding a solution involves these similar steps. 
@@ -28,41 +29,29 @@ For classification, it is less intuitive to visualize loss in the same way. An s
 
 Still, it is possible to devise a cost function 
 
-Another example is SVM classification and hingeloss function. Hingeloss is a loss function which accumulates when the difference between score of correct class and an incorrect one is below certain threshold.
+Another example is SVM classification and hingeloss function. Hingeloss is a loss function which accumulates when the difference between score of correct class and an incorrect one is below certain threshold \\(\delta\\).
 
-\\[J(\theta) = \\]
+\\[J(\theta) = \frac{1}{M} \sum_{i=1}^{M} \sum_{k=1}^{K} max(0, s_{k} - s_{y_{i}} + \delta)\\]
 
 #### Maximum likelihood perspective
 
 This approach seem to be more intuitive for classification problem. Given an input \\(x\\), K possible classes and expected output \\(C_{j}\\) 1 <= j <= K, the model should maximize the conditional probability of \\(P_{\theta}(C_{j}\|x)\\). To determine this class conditional probability, one can either uses the `generative modelling` or `discriminative modelling` approach. The former involves finding out the prior \\(P(x\|C_{j})\\) and input distribution \\(P(x)\\) and then infer posteri via Bayesian rule:
 
-\\[ P_{\theta}(C_{j}\|x) = \frac{P_{\theta}(x\|C_{j} P(C_{j}))}{P(x)}\\]
+\\[ P_{\theta}(C_{j}\|x) = \frac{P_{\theta}(x\|C_{j}) P(C_{j})}{P(x)}\\]
 
 However, determining the input distribution \\(P(x)\\) can be costly for some dataset. So we often directly model posterior \\(P_{\theta}(C_{j}\|x)\\) and tweak \\(\theta\\) to maximize it (discriminative modelling). With m as number of samples:
 
-\\[ P_{\theta}(Y\|X) = \prod_{i=1}^{m} P_{\theta}(y_{i}|x_{i})\\]
+\\[ P_{\theta}(Y\|X) = \prod_{i=1}^{m} P_{\theta}(y_{i} \|x_{i}) \\]
 
-If we model \\(P_{\theta}(y_{i}|x_{i})\\) with softmax function, we can have the cost function as:
+Maximizing the above likelihood is the same as minimizing the negative of likelihood, arriving at our cost function. And since probability is small, log is often taken. Hence, cost function becomes:
 
-\\[ P_{\theta}(Y\|X) = \prod_{i=1}^{m} \prod_{j=1}^{K} 1{y_{i} == j} softmax(j, \theta, X)\\]
+\\[ J_{\theta} = - \frac{1}{m} \sum_{i=1}^{m} log P_{\theta}(y_{i} \|x_{i}) \\]
 
+For example, if we model \\(P_{\theta}(y_{i}\|x_{i})\\) with softmax function, we can have the cost function as:
 
-(By assuming a guassian distribution, sovling it, we will realize that it is equivalent to least square error).
+\\[ J_{\theta} = - \frac{1}{m} \sum_{i=1}^{m} softmax(y_{i}, \theta, x_{i}) \\]
 
 
 #### Reference
 
 1. [Pattern and recognition in marchine learning](http://cs231n.github.io/linear-classify/)
-
-
-#### Note to myself
-
-If it is quadratic function with respect to theta, we can find min . Highschool mathematics say it plateau at derivative = 0. 
-
-We can either solve that equation to find theta.
-
-Or another approach is gradient descent. Analogy: instead of having a map of where to go, we follow the light source/ wind source. Here we look at the direction of gradient. 
-
-To avoid overflow of exp(x) == 0:
-
-https://www.tensorflow.org/api_docs/python/tf/nn/sigmoid_cross_entropy_with_logits

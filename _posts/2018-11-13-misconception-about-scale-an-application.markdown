@@ -3,7 +3,7 @@ layout: post
 title: Misconceptions when scale applications
 date: '2018-11-13 11:04:00'
 tags:
-- engineer
+- technical
 ---
 
 Once in a while, engineering managers and software engineers would triumphantly tell me to use a particular piece of technology because it is scalable or good for concurrency. Unfortunately, scaling an application means trading off different factors affecting an app's performance and no single technology comes as silver bullet to solve them all. Below are some of the misconceptions I often hear.

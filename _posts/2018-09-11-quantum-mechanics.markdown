@@ -5,6 +5,7 @@ date: '2018-09-16 00:16:00'
 tags:
 - science
 - book
+- life
 ---
 
 In [Reality is not what it seem](https://www.amazon.com/Reality-Not-What-Seems-Journey/dp/0735213925), Dalio weaves the beautiful thread of atomicism from when it was first conceived by philosophers of antiquity (Democritus), through banishment under Christain Roman Empire to Renaissense and modern time. The book was both historical and scientific.  

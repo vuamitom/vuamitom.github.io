@@ -3,7 +3,7 @@ layout: post
 title:  How regex is implemented
 date: '2018-10-25 11:04:00'
 tags:
-- engineer
+- technical
 ---
 
 Recently at work, I need to take a deeper look at how optimization is done by different regex libraries and how they combine regex patterns. This document is examining 2 regex implementations: `java.util.regex` of [OpenJDK](https://github.com/openjdk-mirror/jdk7u-jdk/tree/master/src/share/classes/java/util/regex) and `re2` of [Google](https://github.com/google/re2). 

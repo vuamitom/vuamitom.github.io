@@ -4,6 +4,7 @@ title: A few things Firefox does better
 date: '2018-12-12 10:16:00'
 tags:
 - engineer
+- life
 ---
 
 Recently, Microsoft has ditched [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) in favor of Chromium rendering engine in its Edge browser. It led to mourning and concern over the uncertain future of the open web, in which, a single big company may have much control over standards and features of the web. Mozilla rallied internet users to [give Firefox another try](https://blog.mozilla.org/blog/2018/12/06/goodbye-edge/). They have a point. The web has always been a messy place with changing standards with which browser vendors catching up at different speed. A nice looking application may look well on Firefox yet broken on Chrome and vice versa. Testing effort is duplicated to ensure consistent look across browsers. Yet, that messiness and duplication of effort creates a larger space for experiments, more opportunities of participation and better chance to make some thing good. Because, I think, innovation has always been done by allowing independent minds to find different approaches to the solve the same problem. And because, in technology, it is always about weighing trade-offs. The fastest implementation is not necessarily the most modular and embeddable one. 

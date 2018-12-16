@@ -6,6 +6,7 @@ tags:
 - chromium
 - indexeddb
 - webapp
+- technical
 ---
 
 As computation power and data are shifting to the edge, web applications are more and more like installed desktop applications with (limited) file system access, threading, offline storages... Frameworks such as Electron, which allow browser-based application to be packaged as standalone app, are gaining popularity. However, with great power comes great responsibility. Javascript, html, css have always been used to build webpages, which is a stateless and forgiving environment. A broken webpage can be remedied by hitting refresh button. The web is not used to be fast, users' expectation for it is lower than for an installed application. 
