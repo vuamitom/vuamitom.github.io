@@ -25,7 +25,7 @@ For the 0.5 example, from the scientific representation above, we could derive t
 - Exponent = -1. Binary representation = -1 + 127 = 126
 - Significant = 1.0. Since only the MSB is 1, which is omitted, significant part should have 23 zero bits. 
 
-This representation has the advantage of flexible position of dot, (hence the name floating point), with the `exponent` part control numbe of decimal places, thus trades off between precision (more decimal places) and top value range. Now let's put out some code to verify this representation. First, to get the underlying byte sequences of a float32 number.
+This representation has the advantage of flexible position of dot, (hence the name floating point), with the `exponent` part control numbe of decimal places, thus trades off between precision (more decimal places) and top value range. Now let's put out some code to verify this representation. First, to get the underlying byte sequences of a float32 number. (The complete script can be found [here](https://github.com/vuamitom/Code-Exercises/blob/master/blog/floating-point.js))
 
 ```javascript
 var buffer = new ArrayBuffer(4);
@@ -64,7 +64,9 @@ var sig = (((bytes[1] & 0x7F) | 0x80) << 16) | (bytes[2] << 8) | bytes[3];
 Putting things together, we have the mathematical binary representation of float literal 0.5. `toBinaryStr` and `toBits` are helper functions listed at the bottom of this post.
 
 ```javascript
-var mathRep = toBinaryStr(toBits(sig, 24)) + 'E' + expSign + toBits(expVal, 8).join('').replace(/^0+/,'');
+var mathRep = toBinaryStr(toBits(sig, 24)) + 'E' 
+			+ expSign 
+			+ toBits(expVal, 8).join('').replace(/^0+/,'');
 
 //output: 1.0E-1
 ```
