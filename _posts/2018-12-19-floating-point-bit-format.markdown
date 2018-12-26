@@ -3,6 +3,7 @@ layout: post
 title:  Floating point binary representation in javascript
 date: '2018-12-19 16:16:00'
 mathjax: true
+codepen: oJwJvj
 tags:
 - technical
 ---
@@ -25,7 +26,7 @@ For the 0.5 example, from the scientific representation above, we could derive t
 - Exponent = -1. Binary representation = -1 + 127 = 126
 - Significant = 1.0. Since only the MSB is 1, which is omitted, significant part should have 23 zero bits. 
 
-This representation has the advantage of flexible position of dot, (hence the name floating point), with the `exponent` part control numbe of decimal places, thus trades off between precision (more decimal places) and top value range. Now let's put out some code to verify this representation. First, to get the underlying byte sequences of a float32 number. (The complete script can be found [here](https://github.com/vuamitom/Code-Exercises/blob/master/blog/floating-point.js))
+This representation has the advantage of flexible position of dot, (hence the name floating point), with the `exponent` part control numbe of decimal places, thus trades off between precision (more decimal places) and top value range. Now let's put out some code to verify this representation. First, to get the underlying byte sequences of a float32 number. (The complete script can be found [here](https://codepen.io/vuamitom/pen/oJwJvj))
 
 ```javascript
 var buffer = new ArrayBuffer(4);
@@ -66,7 +67,7 @@ Putting things together, we have the mathematical binary representation of float
 ```javascript
 var mathRep = toBinaryStr(toBits(sig, 24)) + 'E' 
 			+ expSign 
-			+ toBits(expVal, 8).join('').replace(/^0+/,'');
+			+ toBits(Math.abs(expVal), 8).join('').replace(/^0+/,'');
 
 //output: 1.0E-1
 ```
@@ -92,9 +93,7 @@ Numbers like 0.5, 0.25, 0.375 is neatly representable in a binary system. On the
 //TODO
 ```
 
-TODO: This post is a work in progress. embed a widget for inspecting floating point
-
-Though this post examines single precision floating point number (32-bit), number in javascript is floating point with double precision (64-bit), minor changes are needed to print out the actual binary representation used by javascript VM. 
+You can try the codepen at the bottom of this post. Though this post examines single precision floating point number (32-bit), number in javascript is floating point with double precision (64-bit), minor changes are needed to print out the actual binary representation used by javascript VM. 
 
 ## Helper functions
 

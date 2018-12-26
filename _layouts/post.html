@@ -18,6 +18,10 @@ comments: true
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+
+    {%- if page.codepen -%}
+      {%- include codepen.html -%}
+    {%- endif -%}
   </div>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
@@ -28,3 +32,6 @@ comments: true
 {%- if page.mathjax -%}
   {%- include mathjax.html -%}
 {%- endif -%}
+
+
+
