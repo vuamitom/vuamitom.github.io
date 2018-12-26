@@ -124,3 +124,5 @@ function toBinaryStr(bits) {
 
 ## Reference
 [https://floating-point-gui.de/formats/fp/](https://floating-point-gui.de/formats/fp/)
+
+## Codepen
