@@ -7,6 +7,8 @@ tags:
 - client
 ---
 
+Client programming 
+
 Server programming is about throughput and low latency. While client programming is all about perceived responsiveness (even at the expense of throughput). Server programming is singular purpose, control. Both the hardware and the purpose of the program. Client-side programming is dealing with the unknown. Platform specs is not known, network condition is not known. 
 
 This guide try to list general philosophies regardless of framework. 
@@ -32,7 +34,3 @@ Pushing fetch logic to components allow better component re-use. And better sync
 3. The fewer the better. 
 
 Throttle real-time request. Batch them. 
-
-4. Storage:
-
-avoid update. or large data entry. E.g with indexeddb. Blob data 
