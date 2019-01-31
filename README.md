@@ -35,3 +35,8 @@ xdg-open $(bundle show minima)
 
 2. copy to equivalent position to overwrite
 
+# trouble shoot disqus
+
+remember to update trusted domain:
+
+https://help.disqus.com/troubleshooting/im-receiving-the-message-we-were-unable-to-load-disqus
