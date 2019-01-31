@@ -2,20 +2,24 @@
 # Install
 
 1. install gem
-```
+```bash
 # On ubuntu 18
 sudo apt-get install ruby-dev
 ``` 
 2. install jekyll
-```
+```bash
 gem install jekyll bundler
 ```
 3. run in this folder
-```
+```bash
 bundle install
 bundle exec jekyll serve
 ```
 
+# Update
+```bash
+bundle update
+```
 # Custom layout
 
 1. Look for file path
