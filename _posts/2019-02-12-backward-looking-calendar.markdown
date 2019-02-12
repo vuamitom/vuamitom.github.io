@@ -1,6 +1,6 @@
 ---
-layout: Calendar as a backward looking tool
-title: Japan Garden
+layout: post
+title: Calendar as a backward looking tool
 date: '2019-02-12 09:30:00'
 tags:
 - life
