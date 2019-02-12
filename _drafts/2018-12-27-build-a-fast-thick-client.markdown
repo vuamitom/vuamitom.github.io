@@ -1,17 +1,19 @@
 ---
 layout: post
-title: Building a really fast and reliable web-based client
-date: '2018-12-27 15:41:40'
+title: On building a fast and reliable client application
+date: '2019-02-11 15:41:40'
 tags:
 - technical
 - client
 ---
 
-Client programming 
+The idea of working full-stack has been around for a long while. A full-stack engineer is capable of participating in development of any application module, be it client or server. After all, underlying concepts and principles are shared. Still, there are subtle differences in metrics for which we should optimize when targeting different platforms. Those differences, if appreciated, would greatly improve user experience. If throughput, latency and horizontal scalability are key consideration in server development, preceived responsiveness and resiliency are those of importance to client application. While we have control over our own server's hardware, client devices' capacity varies greatly and connectivity can be unstable at time. This post is a collection of such considerations. 
 
-Server programming is about throughput and low latency. While client programming is all about perceived responsiveness (even at the expense of throughput). Server programming is singular purpose, control. Both the hardware and the purpose of the program. Client-side programming is dealing with the unknown. Platform specs is not known, network condition is not known. 
+### 1. Retry on network error
 
-This guide try to list general philosophies regardless of framework. 
+When your application runs on client devices, network connection may not function well all the time. Wifi signal is not always stable. User may be moving to a non receptive corner. Requests to online service may fail even if service is still alive. The lazy way
+
+Stateful vs stateless (or not really stateless, just shorter UI session, quicker restart. (rich app is not the same as website. People just don't F5). Network condition is not reliable. It's wifi or 3g. It's not your typical data center's connection. 
 
 1. Manage your own event queue
 
@@ -19,9 +21,7 @@ Any UI based application is built around an event loop. Granted. Each event loop
 
 Don't just rely on the main event loop queue. It results in un wanted priority. 
 
-2. Retry and retry
 
-Stateful vs stateless (or not really stateless, just shorter UI session, quicker restart. (rich app is not the same as website. People just don't F5). Network condition is not reliable. It's wifi or 3g. It's not your typical data center's connection. 
 
 2. Try and catch 
 
@@ -34,3 +34,8 @@ Pushing fetch logic to components allow better component re-use. And better sync
 3. The fewer the better. 
 
 Throttle real-time request. Batch them. 
+
+4. Understanding of business:
+critical vs non-critical. Real-time notification vs non realtime but better prepared response. (e.g when receive notification, load it first, and then show it)
+
+Catch event like switching between tab (re-focus) to check cache to see if anything change. 
