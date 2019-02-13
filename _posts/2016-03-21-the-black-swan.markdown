@@ -3,10 +3,13 @@ layout: post
 title: The Black Swan
 date: '2016-03-21 17:12:08'
 tags:
+- life
 - books
 ---
 
 By Nassim Nicholas Taleb
+
+I enjoyed the first few chapters of this book with the author's anti-establishment atititude. Yet the author seems to take joy in using weird sounding words that are out of my vocab, which makes the rest of the book lengthy and tiresome. Takeway: it is foolhardy to predict future events, their happenings or the extent of their impacts. Most economic theories look at past downturns and crashes in retrospect and try to explain things with present information, which is not available when looking forward to predict, so don't rely on them. Besides, rare events we don't expect often carry large consequences. So insure against bad one and expose oneself to good one is the way to go :) 
 
 >When Missing a Train is Painless
 
