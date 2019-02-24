@@ -209,6 +209,10 @@ Step 3. Select a parition, and a input character i, say \\((A_{2}, i)\\). Then l
 
 Step 4. Iterations in step 3 stop when no partition can be further divided. 
 
+#### Re-implementation in javascript
+
+I've made a [Javascript port](https://github.com/vuamitom/jsfa) of the library. You're welcome to try out if Javascript is your thing. However, the port seems to fall behind V8 regex perf in my benchmarks. Look like V8 has a highly optimized regex implementation. 
+
 #### References
 
 1. [http://www-igm.univ-mlv.fr/~berstel/Exposes/2009-06-08MinimisationLiege.pdf](http://www-igm.univ-mlv.fr/~berstel/Exposes/2009-06-08MinimisationLiege.pdf)
@@ -216,3 +220,5 @@ Step 4. Iterations in step 3 stop when no partition can be further divided.
 2. [Wikipedia DFA Minimization](https://en.wikipedia.org/wiki/DFA_minimization)
 
 3. [A N log N algorithm for minimizing states in a finite automaton](http://i.stanford.edu/pub/cstr/reports/cs/tr/71/190/CS-TR-71-190.pdf)
+
+4. [https://github.com/vuamitom/jsfa](https://github.com/vuamitom/jsfa)
