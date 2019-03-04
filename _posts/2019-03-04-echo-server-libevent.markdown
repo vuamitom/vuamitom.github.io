@@ -27,3 +27,7 @@ make
 To test it. `netcat` is handy. 
 
 Right now, our server treats whatever incoming data as a single stream, not caring what it is. So the next step would be devise a protocol on top of this stream in order to invoke different service methods. And after that, it would be nice to multiplex requests on a single TCP connection. Will update the code next time :). 
+
+#### References
+
+1. [Generic multithreading advice](https://github.com/facebook/folly/blob/master/folly/io/async/README.md#generic-multithreading-advice)
