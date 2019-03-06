@@ -109,4 +109,5 @@ function stringConcate() {
 
 So, just use `+` for string concatenation in Javascript because it is fast. 
 
-Benchmark code used in this post can be found [here](https://github.com/vuamitom/Code-Exercises/blob/master/blog/mem-alloc.js).
+Benchmark code used in this post can be found [here](https://github.com/vuamitom/Code-Exercises/blob/master/blog/mem-alloc.js). Some experiment with saving object allocation time in c++ can be found in [another post](/2019/03/06/cpp-alloc-obj-on-buf-for-perf.html).
+
