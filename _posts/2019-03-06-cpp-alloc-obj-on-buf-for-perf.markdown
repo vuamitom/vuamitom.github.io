@@ -6,7 +6,7 @@ tags:
 - technical
 ---
 
-I wrote about the cost of memory allocation in [a recent post](/2019/02/22/avoid-unnecessary-memory-allocation.html). Given a fixed amount of memory needed, reserve a large chunk in one go is cheaper than grabing smaller chunks one at a time. I did not realize that Cpp has the facility to take advantage of that until reading through the code of [folly::IOBuf](https://github.com/facebook/folly/blob/master/folly/io/IOBuf.h). 
+I wrote about the cost of memory allocation in [a recent post](/2019/02/22/avoid-unnecessary-memory-allocation.html). Given a fixed amount of memory needed, reserve a large chunk in one go is cheaper than grabing smaller chunks one at a time. I did not realize that Cpp has the facility to take advantage of that until reading through the code of [folly::IOBuf](https://github.com/facebook/folly/blob/master/folly/io/IOBuf.cpp#L988). 
 
 For example, we have a class `Obj` and want to reserve an array of N instances of `Obj`. 
 
