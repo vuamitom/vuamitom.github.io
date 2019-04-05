@@ -52,8 +52,9 @@ The role of this neural network then is to predict **scores** value for a given 
 ### Debug training process
 
 This exercise taught me a few things about debugging a neural network. The thing with a neural network is that there is no exception thrown, it still runs smoothly, just high validation loss. For example, during training, I realized that landmark points around the eyes keep scattering even when validation loss has plateaued. Changing learning rate and hyper parameters does not help. So I reduced the training set to a single image to see if the model is able to fit. Turned out it was not, which meant something is wrong with my model code. After going back to the [paper provided code](https://github.com/justusschock/shapenet), I tried to remove the rotation normalizing step, trained again. And it worked!. The point is, trying to test on simple data first can help. 
-
-![landmarks scatter around eyes](/content/images/fail_lm.png)
+|  Before  | After |
+| --- | --- | 
+|![landmarks scatter around eyes](/content/images/fail_lm.png)|![correct landmark](/content/images/cor_lm.png)|
 
 ## Things todo after this
 
