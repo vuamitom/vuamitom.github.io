@@ -45,7 +45,7 @@ It is a pretty straight forward process. There is only one point to note, the `i
 ```python
 update_ops = tf.compat.v1.get_collection(tf.GraphKeys.UPDATE_OPS)
 with tf.control_dependencies(update_ops):
-    print('add dependency on "moving avg" for batch_norm')        
+    # add dependency on "moving avg" for batch_norm        
     train_op = optimizer.minimize(l1_loss, global_step) 
 ```
 
