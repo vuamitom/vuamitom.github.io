@@ -43,10 +43,10 @@ def mobilenet(inputs, is_training=True):
 It is a pretty straight forward process. There is only one point to note, the `is_training` flag. When it is set to True, BatchNorm layers accumulate statistics such as moving variance and moving mean. When it is False, it would just use those values. When I first trained my MobileNetV2 based network, though loss value decreased fine, prediction worked as expected. Just that the model would produce junk output when `is_training` is set to False for evaluation. And quantizing the model seemed to make it gibberish. Turned out, I need to make the update of moving variances and means a dependency of training ops, which is cautioned [here](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/layers/python/layers/layers.py#L473). 
 
 ```python
-	update_ops = tf.compat.v1.get_collection(tf.GraphKeys.UPDATE_OPS)
-    with tf.control_dependencies(update_ops):
-        print('add dependency on "moving avg" for batch_norm')        
-        train_op = optimizer.minimize(l1_loss, global_step) 
+update_ops = tf.compat.v1.get_collection(tf.GraphKeys.UPDATE_OPS)
+with tf.control_dependencies(update_ops):
+    print('add dependency on "moving avg" for batch_norm')        
+    train_op = optimizer.minimize(l1_loss, global_step) 
 ```
 
 Without it, Tensorflow does not write those statistics as part of the model, which breaks it after quantization. 
