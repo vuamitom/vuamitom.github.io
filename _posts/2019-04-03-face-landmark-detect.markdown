@@ -63,6 +63,8 @@ Orange markers are pre-defined landmarks and blue ones are predicted by the mode
 
 Training data set is only more than 6000 images. Augmentating training data (random scale & rotation) can help make the model more adaptive to new image. And since this paper is about how fast it can predict face landmarks, it is necessary to test the claim on mobile device, which may involve converting the Pytorch model to Caffe2 or some thing. Will try it on when time allows. 
 
+Update: There is an implementation of Shapenet in Tensorflow as mentioned in [another post](/2019-09-12-shapenet-face-landmark-tensorflow).
+
 ## References
 
 1. [https://github.com/justusschock/shapenet](https://github.com/justusschock/shapenet)
