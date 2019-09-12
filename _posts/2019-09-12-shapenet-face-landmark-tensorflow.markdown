@@ -6,7 +6,7 @@ tags:
 - technical
 ---
 
-In my previous post on [building face landmark detection model](/2019-04-03-face-landmark-detect), the [Shapenet](https://github.com/justusschock/shapenet) paper was implemented in Pytorch. With Pytorch, however, to run the model on mobile requires converting it to Caffe. Though there is tool to take care of that, some operations are not supported and in the case of Shapenet, it was not something I know how to fix yet. Turn out it was simpler to just re-implement Shapenet in Tensorflow and then convert it to Tensorflow Lite. 
+In my previous post on [building face landmark detection model](/2019/04/03/face-landmark-detect), the [Shapenet](https://github.com/justusschock/shapenet) paper was implemented in Pytorch. With Pytorch, however, to run the model on mobile requires converting it to Caffe. Though there is tool to take care of that, some operations are not supported and in the case of Shapenet, it was not something I know how to fix yet. Turn out it was simpler to just re-implement Shapenet in Tensorflow and then convert it to Tensorflow Lite. 
 
 ## Implement Shapenet in Tensorflow
 
