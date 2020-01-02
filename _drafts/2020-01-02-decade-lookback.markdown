@@ -14,12 +14,17 @@ Career wise, I earned my bachelor degree, got my first job and worked in 5 diffe
 
 - Be possessive of the code. Software engineers write code based on their mental concept of how a system would work and interact. Given the same business requirements, individuals have different way of structuring their code. One may prefer having a large centralized logic unit while other spreading logic into smaller more specialized unit. No matter what amount of best practices would change that. After leading software teams, I've come to accept those idiosynchrasies, and to trust teammates to do what reasonable. In the end, performance metrics and business metrics will drive system designs. 
 
-- Be too quick to do stuff. 
+- Be reckless. In the beginning, putting a new programming language to test in the next project sounded like a nice thing. Now I would prefer to use a familiar toolset to solve real problem rather than getting to know a new ecosystem, unless there are compelling reasons to do so. And a decade ago, I would be eagerly jump on board a new app project, now I would be more likely to talk people out of it. 
 
-Other thing I learnt about the industry and my preference working in it:
+- Think that some part of software is cooler that the other. Backend vs frontend, security vs application, consumer app vs enterprises. They require different skill sets. Thus different people with 
+
+While learning about myself, I have also learnt more about the industry, which keeps changing every day and yet, something hardly change about its people.
 - Come to term with the fact that most software code would be replaced. (thrown away). Cite the Google software design concept paper here. 
-- 
-- 
+- cyclic: RDBMS vs no SQL. SOA and microservices. People dig up old terms. Give it a more trendy name. 
+- name dropper. if you have a hammer. Everything looks like a nail. People are often loud about what technologies they think best. And it take energy and effort to pursuade them otherwise. 
+- the argument 
+
+Awareness of a more complicated landscape. Aware of my limited knowledge and yet, more confident. Accepting to be normal. Nervousness to get to know big name. Having worked in one. 
 
 Book wise. 
 
