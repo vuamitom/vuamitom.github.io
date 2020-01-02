@@ -89,19 +89,20 @@ class Worker(threading.Thread):
 		success = cap.grab()
 
 		results = []
-        idx, count = 0, fnos[0]
-        while success:
-            if count == fnos[idx]:
-                success, image = cap.retrieve()
-                if success:
-                    on_decode_callback(image)
-                else:                
-                    break                    
-                idx += 1
-                if idx >= len(fnos):
-                    break
-            count += 1
-            success = cap.grab()
+		idx, count = 0, fnos[0]
+		while success:
+		    if count == fnos[idx]:
+		        success, image = cap.retrieve()
+		        if success:
+		            on_decode_callback(image)
+		        else:                
+		            break                    
+		        idx += 1
+		        if idx >= len(fnos):
+		            break
+		    count += 1
+		    success = cap.grab()
+		    
 ```
 
 Putting them together:
