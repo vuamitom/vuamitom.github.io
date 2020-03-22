@@ -18,3 +18,6 @@ Hanoi's streets are still filled with motobikes and cars, as busy as ever. The u
 
 Companies, including mine, are tinkering with work-from-home policies. Though VTV aired a section praising businesses moving to remote-working direction, I think it is by no mean a smooth transition for Vietnamese businesses. Working from home requires a certain level of trust in employees in order to work. I feel that that trust level is not really high and there are reasons for that. But I do hope that, when the pandemic subsides, firms do not write off working from home unworkable. Rather they should see it as necessary, build permanent policies and train their employees to work remotely on a more regular basis. Trust takes time. 
 
+![En cave](/content/images/hang_en.jpg)
+
+The week right after when the patient no.17 was hospitalized, fear gripped the whole nation and my trip to Én cave was due. I got cold feet and wanted to postpone it but it was too late for rescheduling, and went ahead with the plan I did. Streets of Phong Nha was empty, and I was the only one staying in that twenty-plus room guest house. Suddenly, anyone could be a potential virus carrier, but forgetting that fact for a moment, then the trip was really enjoyable. Weather was nice, and one has all the space to himself, food was good. Nothing to complain about. 
