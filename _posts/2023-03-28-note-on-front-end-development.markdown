@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes on Front-end development
-date: '2023-03-28 23:06:20'
+date: '2023-03-30 10:06:20'
 tags:
 - technical
 ---
