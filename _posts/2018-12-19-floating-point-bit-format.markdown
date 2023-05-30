@@ -16,7 +16,7 @@ Although, instead of decimal, computer representation uses binary digit. For exa
 
 \\[ 0.5 = 2^{-1} = 1.0 * 2^{-1} = 1.0 E_{2} -1 \\]
 
-Lef of `E` is `significant` part. Right of `E` is `exponent` part. And the actual bit layout is 1 `sign` bit, followed by `exponent` followed by `significant`. The most significant bit (MSB) of `significant` part is always assumed to be 1, and is omitted from the representation.
+Left of `E` is `significant` part. Right of `E` is `exponent` part. And the actual bit layout is 1 `sign` bit, followed by `exponent` followed by `significant`. The most significant bit (MSB) of `significant` part is always assumed to be 1, and is omitted from the representation.
 
 (1 sign bit) - (8 exponent bit) - (23 significant bit)
 
