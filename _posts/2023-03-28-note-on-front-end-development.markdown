@@ -8,6 +8,31 @@ tags:
 
 Front-end development is quick to get started. As projects grow and code build up, there are nuances that may help us avoid the painful road of catching intermittent bugs. Below are a few things I would like to note. Key points are to keep the application state's lean, make program flow obvious, and add checks at your build pipeline. 
 
+## Encapsulate actions, not just components
+
+Think about the time when you need to re-use a component in multiple screens to accomplish something. For example, to ask the user if she really wants to do something, a popup modal is often deployed across screens. One way to do that is to create a shared ConfirmModal component, and embed it wherever it is needed. 
+
+```javascript
+<ConfirmModal open={openConfirmModal} 
+	message={"Are you sure you want to delete X?"}
+	onAccept={positiveAction}
+	onCancel={() => setOpenConfirmModal(false)}/>
+
+function dangerousAction() {
+	setOpenConfirmModal(true);
+}
+```
+That's a first step towards [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Yet we can take one step further. Notice that, the host component does not need to manage the open/close state of the `ConfirmModal`. Rather, encapsulate the intent as a single function, and only return to the host page what it cares about. 
+
+```javascript
+function dangerousAction() {
+	const confirm = await confirm('Are you sure you want to delete X?');
+	if (confirm) {
+		//... continue with dangerousAction 
+	}
+}
+```
+
 ## Choose a minimal state
 
 Frontend application is stateful. UI components are tied to a set of flags to know if users have clicked on a checkbox or selected another tab. Some state flags are variables that get updated by interrupts (events) triggered by network callback, an interval timer. It's important to choose a minimum set of flags that reflect your application state. Avoid having state variables that are derivative of another. 
