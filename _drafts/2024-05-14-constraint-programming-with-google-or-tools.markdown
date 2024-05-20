@@ -40,8 +40,11 @@ colors = [model.NewIntVarFromDomain(cp_model.Domain.FromValues(range(max_degree)
 
 At each assignment step, after pruning if there are still more choices, CP model needs to pick a not-yet assigned variable and assign to it a value from the possible domain. A few techniques can help. 
 
-- **Fail fast** remember that during prunning, a domain value removal earlier in the assignment process worth more since it elimiates more downstream choices. So it can help a CP model to terminate faster if we examine "harder" variable first, i.e variable with more constraints. In graph programming, a higher degree node should be prioritized, since once we assign a value to it, we can cross out more options for other variables.
-- **Greedy** approach makes choices based on heuristical rules that are devised to optimize some easily calculable metrics. In optimizing locally for that metrics, the model is likely to reach a global optimal faster. 
-- **Branch and bounds** approach: say node `i` has a domain of `[1,3, 4]` possible colors. Each assignment is a possible color that the CP model can assign to variable `colors[i]`. The model can choose wich branch to explore first by coming up with an optimistic estimation of the cost of each branch and try out the lower cost first. As a example, in graph coloring, a simple rule can be to explore branch with which the domains of remaining variables are the largest, thus, more likely to be able to select existing colors. 
+- **Fail fast** remember that during prunning, a domain value removal earlier in the assignment process worth more since it elimiates more downstream choices. So it can help a CP model to terminate faster if we examine "harder" variable first, i.e variable with more constraints. In graph programming, a higher degree node should be prioritized, since once we assign a value to it, we can cross out more options for other variables. With Google OR, we can do that by sorting the node by degree first, and add decision strategy:
+```python
+model.AddDecisionStrategy(colors, cp_model.CHOOSE_FIRST, cp_model.SELECT_MIN_VALUE)  
+```
+- **Greedy** approach makes choices based on heuristical rules that are devised to optimize some easily calculable metrics. In optimizing locally for that metrics, the model is likely to reach a global optimal faster. As a example, in graph coloring, a simple rule can be to explore branch with which the domains of remaining variables are the largest, thus, more likely to be able to select existing colors. 
+- **Branch and bounds** approach: say node `i` has a domain of `[1,3, 4]` possible colors. Each assignment is a possible color that the CP model can assign to variable `colors[i]`. The model can choose wich branch to explore first by coming up with an optimistic estimation of the cost of each branch and try out the lower cost first. 
 
-
+*(Example code uses [Google OR tool](https://developers.google.com/optimization))*
