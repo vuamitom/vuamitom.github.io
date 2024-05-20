@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Contraint programming with Google OR Tool
-date: '2014-05-14 04:43:00'
+date: '2014-05-21 02:02:00'
 tags:
 - constraint-programming
 - or-tool
