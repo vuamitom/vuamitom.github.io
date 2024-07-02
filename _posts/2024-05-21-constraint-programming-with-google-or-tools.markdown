@@ -6,6 +6,7 @@ tags:
 - constraint-programming
 - or-tool
 - technical
+- optimization
 ---
 
 Constraint programming (CP) is a technique employed in solving combinatorial problems. Combinatorial problems are set of problems that are quick to verify but take exponential time to try out all possible assignments. Brute force approaches often fail to terminate or take very long CPU time to be of any practical use. 
