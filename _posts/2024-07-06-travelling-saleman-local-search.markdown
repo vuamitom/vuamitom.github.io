@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Travelling Saleman problem with local search
-date: '2024-06-26 02:02:00'
+date: '2024-07-06 18:02:00'
 tags:
 - local-search
 - or-tool
