@@ -13,8 +13,8 @@ Another approach to combinatorial optimization problems is to use local search (
 
 On the other hand, LS starts with a complete configuration which may not be valid. From there, making edits to get closer to a valid solution. 
 
-# Techniques 
-
+# Techniques
+ 
 ## Heuristic 
 
 Given the initial solution configuration, make greedy changes to it in order to reach a more optimal state. Being greedy means making decision that optimizes for a local metric that may lead to an lower overall objective value. The local metric is something quick to compute. For example, in the traveling saleman problem (TSP), instead of asking which k edges we can swap to make the total distance decrease, we can look for which are the two longest edges. Now swapping k longest edges does not guarantee a lower overal objective value, but it is easier to calculate. 
