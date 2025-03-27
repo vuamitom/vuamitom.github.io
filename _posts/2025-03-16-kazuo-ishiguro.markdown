@@ -6,6 +6,7 @@ tags:
 ---
 
 In Kazuo Ishiguro's novels, sometimes there are looming inevitable waiting at the end. 
+
 Like in Never Let Me Go, those children become donors and completes. 
 Or in Klara and the Sun, child owners soon grow up and change, leaving robot servants behind. 
 As these stories progress, we may hope for twists and turns that would resolve the tension and avoid sad endings. 
