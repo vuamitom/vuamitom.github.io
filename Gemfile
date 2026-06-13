@@ -28,3 +28,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # sitemap
 gem "jekyll-sitemap"
+
+# Stdlib gems removed from default gems in Ruby 3.4+/4.0, required by Jekyll 4.3
+gem "logger"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "webrick"
