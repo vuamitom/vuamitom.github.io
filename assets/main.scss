@@ -1,14 +1,314 @@
+---
+# Subtraction.com-inspired editorial theme.
+# White paper, black ink, serif headlines + body, bold-sans labels, hairline rules.
+# Minima variable overrides MUST come before `@import "minima"`.
+---
+
+// --- Base palette & type (set before importing minima) ---
+$base-font-family: "Newsreader", Georgia, "Times New Roman", serif;
+$base-font-size:   19px;
+$base-line-height: 1.65;
+
+$text-color:       #161616;
+$background-color: #ffffff;
+$brand-color:      #161616;
+$content-width:    1240px;
+
 @import "minima";
 
-$t-link-color: #212121;
-.post-link {
-    color: $t-link-color;
-    text-decoration: none;
-    &:hover {
-        color: blue;
-        text-decoration: none;
+// --- Design tokens ---
+$ink:    #161616;
+$muted:  #6b6b6b;
+$rule:   #e4e4e4;          // hairline grey
+$accent: #9c4221;          // restrained rust for hover only
+$serif:  "Newsreader", Georgia, "Times New Roman", serif;
+$sans:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+// A small bold-sans label, used for nav, dates, section markers.
+@mixin label {
+    font-family: $sans;
+    font-weight: 700;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $muted;
+}
+
+// --- Frame ---
+body {
+    border-top: 3px solid $ink;   // the thin rule across the very top
+}
+
+.site-frame {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 30px 40px 90px;
+
+    @media screen and (max-width: $on-laptop) {
+        padding: 22px 22px 60px;
     }
 }
-.testing {
-    color: red;
+
+// Neutralise minima's `.wrapper` (still used inside the footer include).
+.site-frame .wrapper {
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+// --- Masthead ---
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 32px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $ink;
+
+    @media screen and (max-width: $on-palm) {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
+.masthead__brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $ink;
+}
+
+.masthead__title {
+    font-family: $serif;
+    font-weight: 600;
+    font-size: 2.1rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.masthead__tagline {
+    @include label;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    font-size: 0.74rem;
+    margin-top: 7px;
+}
+
+.masthead__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 22px;
+
+    @media screen and (max-width: $on-palm) {
+        justify-content: flex-start;
+        gap: 16px;
+    }
+}
+
+.masthead__navlink {
+    font-family: $sans;
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: $ink;
+    text-decoration: none;
+
+    &:hover { color: $accent; }
+}
+
+// --- Body grid: archive sidebar + content ---
+.site-body {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 56px;
+    margin-top: 40px;
+
+    @media screen and (max-width: $on-laptop) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 28px;
+    }
+}
+
+// --- Archive sidebar ---
+.archive__label {
+    @include label;
+    margin: 0 0 4px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $ink;
+}
+
+.archive__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.archive__item {
+    border-bottom: 1px solid $rule;
+
+    a {
+        display: block;
+        padding: 11px 0;
+        font-family: $sans;
+        font-weight: 600;
+        font-size: 0.8rem;
+        line-height: 1.3;
+        color: $ink;
+        text-decoration: none;
+
+        &:hover { color: $accent; }
+    }
+}
+
+// On narrow screens the archive moves below the content.
+@media screen and (max-width: $on-laptop) {
+    .content { order: 1; }
+    .archive {
+        order: 2;
+        margin-top: 48px;
+        padding-top: 26px;
+        border-top: 1px solid $ink;
+    }
+}
+
+// --- Content: home post list ---
+.content .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content .post-list > li {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 34px;
+    border-bottom: 1px solid $rule;
+
+    &:first-child { padding-top: 0; }
+}
+
+.post-list .post-meta {
+    @include label;
+    order: -1;            // pull the date above the title, like a kicker
+    margin-bottom: 11px;
+}
+
+.post-list h2,
+.post-list h3 {
+    margin: 0 0 8px;
+    font-family: $serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+}
+
+.post-list .post-link {
+    color: $ink;
+    text-decoration: none;
+    &:hover { color: $accent; }
+}
+
+.post-list p {
+    font-family: $serif;
+    color: #333;
+    line-height: 1.62;
+    margin: 4px 0 0;
+}
+
+// --- Content: single post ---
+.post-header {
+    margin-bottom: 30px;
+}
+
+.post-title {
+    font-family: $serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+}
+
+.post-header .post-meta {
+    @include label;
+}
+
+.post-content {
+    font-family: $serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #1c1c1c;
+    max-width: 42rem;
+
+    h2 { font-family: $serif; font-size: 1.55rem; font-weight: 600; line-height: 1.2; margin: 1.9em 0 0.5em; letter-spacing: -0.01em; }
+    h3 { font-family: $serif; font-size: 1.28rem; font-weight: 600; margin: 1.7em 0 0.5em; }
+    h4 { font-family: $serif; font-size: 1.1rem; font-weight: 700; margin: 1.5em 0 0.5em; }
+
+    p, ul, ol { margin: 0 0 1.25em; }
+
+    a {
+        color: $ink;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+        &:hover { color: $accent; }
+    }
+
+    blockquote {
+        border-left: 3px solid $ink;
+        color: #444;
+        font-style: italic;
+        padding-left: 1em;
+        margin-left: 0;
+    }
+
+    img { display: block; margin: 1.5em 0; }
+}
+
+// --- Pager & RSS (home) ---
+.pager {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 26px 0 0;
+
+    a {
+        font-family: $sans;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: $ink;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+.rss-subscribe {
+    @include label;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 26px;
+
+    a { color: $ink; }
+}
+
+// --- Footer ---
+.site-footer {
+    border: 0;
+    border-top: 1px solid $ink;
+    margin-top: 60px;
+    padding-top: 22px;
+    font-family: $sans;
+    font-size: 0.8rem;
+    color: $muted;
+
+    .footer-col-wrapper { font-size: inherit; color: inherit; }
+    a { color: $muted; &:hover { color: $accent; } }
 }
