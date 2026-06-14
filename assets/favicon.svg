@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 70 70" width="64" height="64">
+  <!-- Cartoon avocado favicon, tilted ~20° -->
+  <defs>
+    <clipPath id="body">
+      <path d="M32 5 C21 5 15 16 14 27 C13 36 10 40 10 47 C10 56 19 61 32 61 C45 61 54 56 54 47 C54 40 51 36 50 27 C49 16 43 5 32 5 Z"/>
+    </clipPath>
+  </defs>
+
+  <g transform="rotate(20 32 33)">
+    <!-- Skin (dark green body) -->
+    <path d="M32 5 C21 5 15 16 14 27 C13 36 10 40 10 47 C10 56 19 61 32 61 C45 61 54 56 54 47 C54 40 51 36 50 27 C49 16 43 5 32 5 Z"
+          fill="#3f7a2e"/>
+
+    <!-- Flesh (lighter green inside) -->
+    <g clip-path="url(#body)">
+      <path d="M32 12 C23 12 18 21 17 30 C16 37 14 41 14 47 C14 54 22 57 32 57 C42 57 50 54 50 47 C50 41 48 37 47 30 C46 21 41 12 32 12 Z"
+            fill="#d9e8a0"/>
+    </g>
+
+    <!-- Pit -->
+    <circle cx="32" cy="40" r="11" fill="#8a5a2b"/>
+    <circle cx="28" cy="36" r="3.5" fill="#a87a4a"/>
+  </g>
+</svg>
